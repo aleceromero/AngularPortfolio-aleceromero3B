@@ -1,0 +1,56 @@
+{
+    "imgBaner": "../assets/Imagenes/ban03.png",
+    "nombre": "Alejandra Cecilia Romero",
+    "imgPerfil": "../assets/Imagenes/avatarPerfil.jpg",
+    "ciudad": "Buenos Aires, Argentina",
+    "sobreMi": "texto sobre mi Lorem ipsum dolor sit amet consectetur a contar un breve resumen añsodifnasd vf ñaoisdf añl nañsodi nañosicjn añsoi añoisdjnañsdknc ñoaisd ñasdnc añosic  ñaosdncñoasdkcn isdf añl nañsodi nañosicjn añsoi añoisdjnañsdknc ñoaisd ñasdnc añosic  ñaosdncñoasdkcn ",
+    "experiencia": [{
+            "puesto": "Experiencia 1",
+            "start": "inicio 01",
+            "end": "final 01",
+            "empresa": "Empresa 1",
+            "descripcion": "Descripcion 01 de la experiencia Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
+        },
+        {
+            "puesto": "Experiencia 2",
+            "start": "inicio 02",
+            "end": "final 02",
+            "empresa": "Empresa 2",
+            "descripcion": "Descripcion 02 de la experiencia Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
+        },
+        {
+            "puesto": "Experiencia 3",
+            "start": "inicio 03",
+            "end": "final 03",
+            "empresa": "Empresa 3",
+            "descripcion": "Descripcion 03 de la experiencia Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
+        }],
+    "educacion":[{
+            "titulo": "Título 1",
+            "start": "inicio 01",
+            "end": "final 01",
+            "establecimiento": "Establecimiento 1",
+            "descripcion": "Descripcion 01 de la educacion Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
+        },
+        {
+            "titulo": "Título 2",
+            "start": "inicio 02",
+            "end": "final 02",
+            "establecimiento": "Establecimiento 2",
+            "descripcion": "Descripcion 02 de la educacion Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
+        },
+        {   "titulo": "Título 2",
+            "start": "inicio 03",
+            "end": "final 03",
+            "establecimiento": "Establecimiento 3",
+            "descripcion": "Descripcion 03 de la educacion Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
+        }],
+    "proyecto1": "Proyecto1",
+    "proyecto2": "Proyecto2",
+    "descripcion1": "01Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.",
+    "descripcion2": "02Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.",
+    "imgProyecto1": "../assets/Imagenes/proyect01.png",
+    "imgProyecto2": "../assets/Imagenes/cardImage01.webp"
+}
+
+

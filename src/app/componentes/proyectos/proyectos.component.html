@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div id="proyectos" class="row text-light rounded">
+        <div class="col">
+            <div class="row">
+                <div class="col-10">
+                    <h2 class="h2">Proyectos</h2>
+                </div>
+                <!-- botones de edicion -->
+                <div class="col-2" >
+                    <div id="proyectosEdit" class="d-flex flex-row-reverse">
+                        <ul>
+                            <li class="nav" style="display:inline"><img src="../assets/Imagenes/Sin título.png" alt="logo editar" width="30px">
+                            </li>
+                            <li class="nav" style="display:inline"><img src="../assets/Imagenes/Sin título.png" alt="logo editar" width="30px">
+                            </li>
+                        </ul>
+                    </div>    
+                </div>
+                <!-- fin de botones de edicion -->
+            </div>
+        </div>
+        <div class="row justify-content-center" style="margin:0;">
+            <div class="col-md-5" style="margin:15px">
+                <div class="card mb-3 text-white bg-dark h-100">
+                    <a href="https://aleceromero.wixsite.com/ojota" target="_blank"><img [src]="miMaqPortfolio.imgProyecto1" class="card-img-top" alt="proyecto1" width="25%"></a>
+                    <div class="card-body"><h5 class="h5">{{miMaqPortfolio.proyecto1}}</h5>
+                    <p class="card-text">{{miMaqPortfolio.descripcion1}}</p>
+                    </div>
+                </div>  
+            </div>
+            <div class="col-md-5" style="margin:15px;">
+                <div class="card mb-3 text-white bg-dark h-100">
+                    <a href="" target="_blank"><img [src]="miMaqPortfolio.imgProyecto2" class="card-img-top" alt="proyecto2" width="25%"></a>
+                    <div class="card-body"><h5 class="h5">{{miMaqPortfolio.proyecto2}}</h5>
+                    <p class="card-text">{{miMaqPortfolio.descripcion2}}</p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
