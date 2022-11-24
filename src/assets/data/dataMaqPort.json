@@ -45,6 +45,23 @@
             "establecimiento": "Establecimiento 3",
             "descripcion": "Descripcion 03 de la educacion Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
         }],
+    "habilidades":[{
+            "tecnologia": "HTML",
+            "nivel" : "20"
+        },
+        {   "tecnologia": "CSS",
+            "nivel" : "35" 
+        },
+        {  "tecnologia": "Angular",
+            "nivel" : "50"
+        },
+        {
+            "tecnologia": "GIT",
+            "nivel" : "65"
+        },
+        {   "tecnologia": "SQL",
+            "nivel" : "45"
+    }],
     "proyecto1": "Proyecto1",
     "proyecto2": "Proyecto2",
     "descripcion1": "01Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.",

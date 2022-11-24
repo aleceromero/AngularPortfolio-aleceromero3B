@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GeneralMaqPortService } from 'src/app/servicios/general-maq-port.service';
 
 @Component({
   selector: 'app-habilidades',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./habilidades.component.css']
 })
 export class HabilidadesComponent implements OnInit {
-
-  constructor() { }
+  miMaqPortfolio:any;
+  habilidadesList:any;
+  constructor(private datosPortfolio:GeneralMaqPortService) { }
 
   ngOnInit(): void {
+    this.datosPortfolio.obtenerDatos().subscribe(data => {
+      this.miMaqPortfolio=data;
+      this.habilidadesList=data.habilidades;
+    })
   }
 
 }
