@@ -2,36 +2,39 @@
     <div id="educacion" class="row text-light rounded-bottom">
         <div class="col">
             <div class="row pb-3">
-                <div class="col-10">
+                <div class="col-10" style="background-color:#cf5929 ;">
                     <h2 class="h2">Educación</h2>
                 </div>
-                <!-- botones de edicion -->
+                <!-- boton de agregar -->
                 <div class="col-2" >
-                    <div id="educacionEdit" class="d-flex flex-row-reverse">
-                        <ul>
-                            <li class="nav" style="display:inline"><img src="../assets/Imagenes/Sin título.png" alt="logo editar" width="30px">
-                            </li>
-                            <li class="nav" style="display:inline"><img src="../assets/Imagenes/Sin título.png" alt="logo editar" width="30px">
-                            </li>
-                        </ul>
+                    <div id="sobreMiEdit" class="d-flex flex-row-reverse">
+                        <button type="button" class="btn p-0"><img src="../assets/Imagenes/Sin título.png" alt="logo editar" width="30px">
+                        </button>
                     </div>    
                 </div>
-                <!-- fin de botones de edicion -->
+                <!-- fin de boton de agregar -->
             </div>
-                <ul class="ps-1">
-                    <li *ngFor="let educacion of educacionList" class="list-unstyled pb-3">
-                        <h5 class="h5">{{educacion.titulo}}</h5>
-                        Fechas {{educacion.start}} - {{educacion.end}} <br>
-                        {{educacion.establecimiento}}<br>
-                        {{educacion.descripcion}}
-                    </li>
-                    <!--<li>
-                        <h5 class="h5">Educación 2</h5>
-                        Fechas inicio fin <br>
-                        Establecimiento 2 <br>
-                        Descripcion de la educacion Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh. 
-                    </li> -->
-                </ul>
+            <ul class="ps-1">
+                <li *ngFor="let educacion of educacionList" class="list-unstyled">
+                    <div class="row ">
+                        <div class="col-10">
+                            <h5 class="h5 fw-bold">{{educacion.titulo}}</h5>
+                        </div>
+                        <div class="col-2 " style="text-align:right">
+                            <!-- botones de edicion -->
+                            <button type="button" class="btn p-0"><img src="../assets/Imagenes/Sin título.png" alt="logo editar" width="30px">
+                            </button>
+                            <button type="button" class="btn p-0"><img src="../assets/Imagenes/Sin título.png" alt="logo editar" width="30px">
+                            </button>    
+                            <!-- fin de botones de edicion -->
+                        </div>
+                    </div>
+                    <h6 class="text-uppercase">{{educacion.establecimiento}}</h6>
+                    <P class="fst-italic">{{educacion.start}} - {{educacion.end}} </P>
+                    {{educacion.descripcion}}
+                    <hr size="1px" color="#fdf1c9" />
+                </li>
+            </ul>
         </div>
     </div>
 </div>

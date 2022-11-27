@@ -5,11 +5,11 @@
     "ciudad": "Buenos Aires, Argentina",
     "sobreMi": "texto sobre mi Lorem ipsum dolor sit amet consectetur a contar un breve resumen añsodifnasd vf ñaoisdf añl nañsodi nañosicjn añsoi añoisdjnañsdknc ñoaisd ñasdnc añosic  ñaosdncñoasdkcn isdf añl nañsodi nañosicjn añsoi añoisdjnañsdknc ñoaisd ñasdnc añosic  ñaosdncñoasdkcn ",
     "experiencia": [{
-            "puesto": "Experiencia 1",
-            "start": "inicio 01",
-            "end": "final 01",
-            "empresa": "Empresa 1",
-            "descripcion": "Descripcion 01 de la experiencia Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
+            "puesto": "Operadora - Data Entry",
+            "start": "Octubre 2009",
+            "end": "Enero 2013",
+            "empresa": "Ases Consulting",
+            "descripcion": "Auditoria manual de resoluciones complejas en servicio de normalización de datos y geocodificación. Resolución manual de casos que la herramienta o proceso no pudo resolver Asistencia en la creación de mapas utilizados para la geocodificación a través del programa MapInfo"
         },
         {
             "puesto": "Experiencia 2",
