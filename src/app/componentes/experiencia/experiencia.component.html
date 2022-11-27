@@ -1,7 +1,7 @@
 <div class="container-fluid" style="margin-bottom:1px">
     <div id="experiencia" class="row text-light rounded-top">
         <div class="col">
-            <div class="row">
+            <div class="row pb-3">
                 <div class="col-10">
                     <h2 class="h2">Experiencia</h2>
                 </div>
@@ -18,8 +18,8 @@
                 </div>
                 <!-- fin de botones de edicion -->
             </div>
-            <ul>
-                <li *ngFor="let experiencia of experienciaList">
+            <ul class="ps-1">
+                <li *ngFor="let experiencia of experienciaList" class="list-unstyled pb-3 ">
                     <h5 class="h5">{{experiencia.puesto}}</h5>
                     Fechas {{experiencia.start}} - {{experiencia.end}} <br>
                     {{experiencia.empresa}} <br>
@@ -32,6 +32,8 @@
                     Descripcion de la experiencia Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh. 
                 </li>-->
             </ul>
+
         </div>
     </div>
+    
 </div>

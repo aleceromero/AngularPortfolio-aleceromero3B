@@ -1,7 +1,7 @@
 <div class="container-fluid" >
     <div id="educacion" class="row text-light rounded-bottom">
         <div class="col">
-            <div class="row">
+            <div class="row pb-3">
                 <div class="col-10">
                     <h2 class="h2">Educación</h2>
                 </div>
@@ -18,8 +18,8 @@
                 </div>
                 <!-- fin de botones de edicion -->
             </div>
-                <ul>
-                    <li *ngFor="let educacion of educacionList">
+                <ul class="ps-1">
+                    <li *ngFor="let educacion of educacionList" class="list-unstyled pb-3">
                         <h5 class="h5">{{educacion.titulo}}</h5>
                         Fechas {{educacion.start}} - {{educacion.end}} <br>
                         {{educacion.establecimiento}}<br>
