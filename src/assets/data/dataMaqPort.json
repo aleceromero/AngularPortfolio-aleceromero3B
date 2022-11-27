@@ -3,6 +3,7 @@
     "nombre": "Alejandra Cecilia Romero",
     "imgPerfil": "../assets/Imagenes/avatarPerfil.jpg",
     "ciudad": "Buenos Aires, Argentina",
+    "mail": "aleceromero@gmail.com",
     "sobreMi": "texto sobre mi Lorem ipsum dolor sit amet consectetur a contar un breve resumen añsodifnasd vf ñaoisdf añl nañsodi nañosicjn añsoi añoisdjnañsdknc ñoaisd ñasdnc añosic  ñaosdncñoasdkcn isdf añl nañsodi nañosicjn añsoi añoisdjnañsdknc ñoaisd ñasdnc añosic  ñaosdncñoasdkcn ",
     "experiencia": [{
             "puesto": "Operadora - Data Entry",
@@ -62,12 +63,23 @@
         {   "tecnologia": "SQL",
             "nivel" : "45"
     }],
-    "proyecto1": "Proyecto1",
-    "proyecto2": "Proyecto2",
-    "descripcion1": "01Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.",
-    "descripcion2": "02Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.",
-    "imgProyecto1": "../assets/Imagenes/proyect01.png",
-    "imgProyecto2": "../assets/Imagenes/cardImage01.webp"
+    "proyectos": [{
+            "nombre": "Proyecto1",
+            "descripcion": "01Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.",
+            "imgProyecto": "../assets/Imagenes/proyect01.png",
+            "urlProyecto": "https://aleceromero.wixsite.com/ojota"
+        },
+        {   "nombre": "Proyecto2",
+            "descripcion": "02Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.",
+            "imgProyecto": "../assets/Imagenes/cardImage01.webp",
+            "urlProyecto": ""
+    }]
+    
+    
+    
+    
+    
+    
 }
 
 
