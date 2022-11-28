@@ -3,8 +3,10 @@
         <div class="col-3 col-md-2">
             <img [src]="miMaqPortfolio.imgPerfil" alt="Mi foto" width="100%" class="rounded-circle  " style="margin-top:-50%">
             <div style="text-align:right">
-                <button type="button" class="btn " ><img src="../assets/Imagenes/Sin título.png" alt="logo editar" width="30px">
+                <!-- boton de agregar -->
+                <button type="button" class="btn btn-outline-dark " ><i class="fa-solid fa-pen"></i>
                 </button>
+                <!-- fin de boton de agregar -->
             </div>
         </div>
         <div class="col-9 col-md-10 " style="color:#010101">
@@ -12,14 +14,15 @@
                 <div class="col-10">
                     <h2 class="h2">{{miMaqPortfolio.nombre}}</h2>
                     <p>{{miMaqPortfolio.ciudad}}</p>
+                    
                 </div>
                 <!-- boton de edicion -->
                 <div class="col-2" >
                     <div id="sobreMiEdit" class="d-flex flex-row-reverse">
                     
-                        <button type="button" class="btn p-0"><img src="../assets/Imagenes/Sin título.png" alt="logo editar" width="30px">
+                        <button type="button" class="btn ms-1 btn-outline-dark"><i class="fa-solid fa-xmark" style="width: 15px;"></i>
                         </button>
-                        <button type="button" class="btn p-0"><img src="../assets/Imagenes/Sin título.png" alt="logo editar" width="30px">
+                        <button type="button" class="btn px-1  btn-outline-dark"><i class="fa-solid fa-pen" style="width: 30px;"></i>
                         </button>
                     </div>    
                 </div>              
