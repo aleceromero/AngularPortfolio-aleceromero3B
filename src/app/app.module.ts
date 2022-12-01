@@ -15,6 +15,7 @@ import { Error404Component } from './componentes/error404/error404.component';
 import { LoginModalComponent } from './modales/login-modal/login-modal.component';
 import { BannerModalComponent } from './modales/banner-modal/banner-modal.component';
 import { ImgPerfilModalComponent } from './modales/img-perfil-modal/img-perfil-modal.component';
+import { SobreMiModalComponent } from './modales/sobre-mi-modal/sobre-mi-modal.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ImgPerfilModalComponent } from './modales/img-perfil-modal/img-perfil-m
     Error404Component,
     LoginModalComponent,
     BannerModalComponent,
-    ImgPerfilModalComponent
+    ImgPerfilModalComponent,
+    SobreMiModalComponent
   ],
   imports: [
     BrowserModule,

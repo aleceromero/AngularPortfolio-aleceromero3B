@@ -25,11 +25,12 @@
                     
                         <button type="button" class="btn ms-1"><i class="fa-solid fa-xmark" style="width: 15px;"></i>
                         </button>
-                        <button type="button" class="btn px-1"><i class="fa-solid fa-pen" style="width: 30px;"></i>
+                        <button type="button" class="btn px-1" data-bs-toggle="modal" data-bs-target="#sobreMiModal"><i class="fa-solid fa-pen" style="width: 30px;"></i>
                         </button>
                     </div>    
                 </div>              
-                <!--fin de boton de edicion-->   
+                <!--fin de boton de edicion-->
+                <app-sobre-mi-modal></app-sobre-mi-modal> 
                  
             </div>
             <p>{{miMaqPortfolio.sobreMi}}</p>
