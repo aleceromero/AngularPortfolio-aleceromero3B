@@ -12,6 +12,7 @@ import { HabilidadesComponent } from './componentes/habilidades/habilidades.comp
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { Error404Component } from './componentes/error404/error404.component';
+import { LoginModalComponent } from './modales/login-modal/login-modal.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { Error404Component } from './componentes/error404/error404.component';
     HabilidadesComponent,
     ProyectosComponent,
     FooterComponent,
-    Error404Component
+    Error404Component,
+    LoginModalComponent
   ],
   imports: [
     BrowserModule,
