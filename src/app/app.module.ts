@@ -16,6 +16,8 @@ import { LoginModalComponent } from './modales/login-modal/login-modal.component
 import { BannerModalComponent } from './modales/banner-modal/banner-modal.component';
 import { ImgPerfilModalComponent } from './modales/img-perfil-modal/img-perfil-modal.component';
 import { SobreMiModalComponent } from './modales/sobre-mi-modal/sobre-mi-modal.component';
+import { ExperienciaModalComponent } from './modales/experiencia-modal/experiencia-modal.component';
+import { AgregarExpModalComponent } from './modales/agregar-exp-modal/agregar-exp-modal.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { SobreMiModalComponent } from './modales/sobre-mi-modal/sobre-mi-modal.c
     LoginModalComponent,
     BannerModalComponent,
     ImgPerfilModalComponent,
-    SobreMiModalComponent
+    SobreMiModalComponent,
+    ExperienciaModalComponent,
+    AgregarExpModalComponent
   ],
   imports: [
     BrowserModule,

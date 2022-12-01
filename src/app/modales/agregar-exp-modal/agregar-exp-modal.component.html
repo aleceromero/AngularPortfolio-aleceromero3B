@@ -1,0 +1,44 @@
+<!-- Modal agregar experiencia-->
+<div class="modal fade" style="text-align:left;" id="agregarExpModal" tabindex="-1" aria-labelledby="agregarExpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-dark" id="agregarExpModalLabel">Agregar experiencia</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <!-- inicio form -->
+            <form>
+                <div class="mb-3">
+                <label for="InputAddPuesto" class="form-label text-dark">Puesto</label>
+                <input type="text" class="form-control" id="InputAddPuesto" required>
+                </div>
+                <div class="mb-3">
+                <label for="InputAddFechaInicio" class="form-label text-dark">Fecha inicio</label>
+                <input type="date" class="form-control" id="InputAddFechaInicio" required>
+                </div>
+                <div class="mb-3">
+                <label for="InputAddFechaFin" class="form-label text-dark">Fecha fin</label>
+                <input type="date" class="form-control" id="InputAddFechaFin">
+                </div>
+                <div class="mb-3">
+                <label for="InputAddEmpresa" class="form-label text-dark">Empresa</label>
+                <input type="text" class="form-control" id="InputAddEmpresa" required>
+                </div>
+                <div class="mb-3">
+                <label for="InputAddDescripcionExp" class="form-label text-dark">Descripción</label>
+                <textarea class="form-control" id="InputAddDescripcionExp"></textarea>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-warning">Enviar</button>
+                </div>
+                
+            </form>
+            <!-- fin del form -->
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
