@@ -18,6 +18,8 @@ import { ImgPerfilModalComponent } from './modales/img-perfil-modal/img-perfil-m
 import { SobreMiModalComponent } from './modales/sobre-mi-modal/sobre-mi-modal.component';
 import { ExperienciaModalComponent } from './modales/experiencia-modal/experiencia-modal.component';
 import { AgregarExpModalComponent } from './modales/agregar-exp-modal/agregar-exp-modal.component';
+import { EducacionModalComponent } from './modales/educacion-modal/educacion-modal.component';
+import { AgregarEdModalComponent } from './modales/agregar-ed-modal/agregar-ed-modal.component';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { AgregarExpModalComponent } from './modales/agregar-exp-modal/agregar-ex
     ImgPerfilModalComponent,
     SobreMiModalComponent,
     ExperienciaModalComponent,
-    AgregarExpModalComponent
+    AgregarExpModalComponent,
+    EducacionModalComponent,
+    AgregarEdModalComponent
   ],
   imports: [
     BrowserModule,
