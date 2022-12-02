@@ -1,0 +1,40 @@
+<!-- Modal agregar proyectos-->
+<div class="modal fade" id="agregarProyModal" tabindex="-1" aria-labelledby="agregarProyModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-dark" id="agregarProyModalLabel">Agregar proyecto</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <!-- inicio form -->
+            <form>
+                <div class="mb-3">
+                <label for="InputAddProyecto" class="form-label text-dark">Nombre</label>
+                <input type="text" class="form-control" id="InputAddProyecto" required>
+                </div>
+                <div class="mb-3">
+                <label for="addImgProyecto" class="form-label text-dark">Imagen</label>
+                <input type="url"  class="form-control" id="addImgProyecto" name="addImgProyecto" placeholder="inserte url de imagen" required>
+                </div>
+                <div class="mb-3">
+                <label for="addUrlProyecto" class="form-label text-dark">Dirección</label>
+                <input type="url"  class="form-control" id="addUrlProyecto" name="addUrlProyecto" placeholder="inserte url del proyecto" required>
+                </div>
+                <div class="mb-3">
+                <label for="InputAddDescripcionProy" class="form-label text-dark">Descripción</label>
+                <textarea class="form-control" id="InputAddDescripcionProy"></textarea>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-warning">Enviar</button>
+                </div>
+                
+            </form>
+            <!-- fin del form -->
+
+        </div>
+        
+      </div>
+    </div>
+  </div>

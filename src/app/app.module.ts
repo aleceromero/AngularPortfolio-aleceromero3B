@@ -22,6 +22,8 @@ import { EducacionModalComponent } from './modales/educacion-modal/educacion-mod
 import { AgregarEdModalComponent } from './modales/agregar-ed-modal/agregar-ed-modal.component';
 import { HabilidadesModalComponent } from './modales/habilidades-modal/habilidades-modal.component';
 import { AgregarHabModalComponent } from './modales/agregar-hab-modal/agregar-hab-modal.component';
+import { ProyectosModalComponent } from './modales/proyectos-modal/proyectos-modal.component';
+import { AgregarProyModalComponent } from './modales/agregar-proy-modal/agregar-proy-modal.component';
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { AgregarHabModalComponent } from './modales/agregar-hab-modal/agregar-ha
     EducacionModalComponent,
     AgregarEdModalComponent,
     HabilidadesModalComponent,
-    AgregarHabModalComponent
+    AgregarHabModalComponent,
+    ProyectosModalComponent,
+    AgregarProyModalComponent
   ],
   imports: [
     BrowserModule,

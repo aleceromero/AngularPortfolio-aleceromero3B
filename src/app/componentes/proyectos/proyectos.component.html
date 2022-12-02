@@ -9,10 +9,12 @@
                 <div class="col-2" >
                     <!-- boton de agregar -->
                     <div id="ProyectosEdit" class="d-flex flex-row-reverse">
-                        <button type="button" class="btn  px-1 btn-dark"><i class="fa-solid fa-plus" style="width: 30px; color:blanchedalmond"></i>
+                        <button type="button" class="btn  px-1 btn-dark" data-bs-toggle="modal" data-bs-target="#agregarProyModal"><i class="fa-solid fa-plus" style="width: 30px; color:blanchedalmond"></i>
                         </button>
                     </div>   
-                <!-- fin de boton de agregar --> 
+                <!-- modal agregar proyecto -->
+                <app-agregar-proy-modal></app-agregar-proy-modal>
+                <!-- fin modal agregar proyecto -->
                 </div>
                 
             </div>
@@ -25,12 +27,14 @@
                         <p class="card-text">{{proyectos.descripcion}}</p>
                         <!-- botones de edicion -->
                         <div style="text-align:right">
-                            <button type="button" class="btn px-1  btn-dark"><i class="fa-solid fa-pen" style="width: 30px; color:blanchedalmond"></i>
+                            <button type="button" class="btn px-1  btn-dark" data-bs-toggle="modal" data-bs-target="#proyectosModal"><i class="fa-solid fa-pen" style="width: 30px; color:blanchedalmond"></i>
                             </button>
                             <button type="button" class="btn ms-1 btn-dark"><i class="fa-solid fa-xmark" style="width: 15px; color:blanchedalmond"></i>
                             </button>   
                         </div>
-                        <!-- fin de botones de edicion -->
+                        <!-- modal editar proyecto -->
+                        <app-proyectos-modal></app-proyectos-modal>
+                        <!-- modal editar proyecto -->
                     </div>
                 </div>  
             </div> 

@@ -1,0 +1,40 @@
+<!-- Modal proyectos-->
+<div class="modal fade" id="proyectosModal" tabindex="-1" aria-labelledby="proyectosModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-dark" id="proyectosModalLabel">Editar proyecto</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <!-- inicio form -->
+            <form>
+                <div class="mb-3">
+                <label for="InputProyecto" class="form-label text-dark">Nombre</label>
+                <input type="text" class="form-control" id="InputProyecto">
+                </div>
+                <div class="mb-3">
+                <label for="imgProyecto" class="form-label text-dark">Imagen</label>
+                <input type="url"  class="form-control" id="imgProyecto" name="imgProyecto" placeholder="inserte url de imagen">
+                </div>
+                <div class="mb-3">
+                <label for="urlProyecto" class="form-label text-dark">Dirección</label>
+                <input type="url"  class="form-control" id="urlProyecto" name="urlProyecto" placeholder="inserte url del proyecto">
+                </div>
+                <div class="mb-3">
+                <label for="InputDescripcionProy" class="form-label text-dark">Descripción</label>
+                <textarea class="form-control" id="InputDescripcionProy"></textarea>
+                </div>
+               
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-warning">Enviar</button>
+                </div>
+                
+            </form>
+            <!-- fin del form -->
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
