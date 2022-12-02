@@ -20,6 +20,8 @@ import { ExperienciaModalComponent } from './modales/experiencia-modal/experienc
 import { AgregarExpModalComponent } from './modales/agregar-exp-modal/agregar-exp-modal.component';
 import { EducacionModalComponent } from './modales/educacion-modal/educacion-modal.component';
 import { AgregarEdModalComponent } from './modales/agregar-ed-modal/agregar-ed-modal.component';
+import { HabilidadesModalComponent } from './modales/habilidades-modal/habilidades-modal.component';
+import { AgregarHabModalComponent } from './modales/agregar-hab-modal/agregar-hab-modal.component';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { AgregarEdModalComponent } from './modales/agregar-ed-modal/agregar-ed-m
     ExperienciaModalComponent,
     AgregarExpModalComponent,
     EducacionModalComponent,
-    AgregarEdModalComponent
+    AgregarEdModalComponent,
+    HabilidadesModalComponent,
+    AgregarHabModalComponent
   ],
   imports: [
     BrowserModule,

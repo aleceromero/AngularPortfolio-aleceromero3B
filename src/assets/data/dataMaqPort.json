@@ -47,20 +47,20 @@
             "descripcion": "Descripcion 03 de la educacion Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
         }],
     "habilidades":[{
-            "tecnologia": "HTML",
+            "habilidad": "HTML",
             "nivel" : "20"
         },
-        {   "tecnologia": "CSS",
+        {   "habilidad": "CSS",
             "nivel" : "35" 
         },
-        {  "tecnologia": "Angular",
+        {  "habilidad": "Angular",
             "nivel" : "50"
         },
         {
-            "tecnologia": "GIT",
+            "habilidad": "GIT",
             "nivel" : "65"
         },
-        {   "tecnologia": "SQL",
+        {   "habilidad": "SQL",
             "nivel" : "45"
     }],
     "proyectos": [{

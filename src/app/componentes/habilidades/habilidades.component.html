@@ -8,10 +8,12 @@
                 <div class="col-2" >
                     <!-- boton de agregar -->
                     <div id="HabilidadesEdit" class="d-flex flex-row-reverse">
-                        <button type="button" class="btn  px-1  btn-outline-dark" ><i class="fa-solid fa-plus" style="width: 30px"></i>
+                        <button type="button" class="btn  px-1  btn-outline-dark" data-bs-toggle="modal" data-bs-target="#agregarHabModal"><i class="fa-solid fa-plus" style="width: 30px"></i>
                         </button>
                     </div>   
-                <!-- fin de boton de agregar --> 
+                <!-- modal agregar habilidad -->
+                <app-agregar-hab-modal></app-agregar-hab-modal> 
+                <!-- fin modal agregar habilidad -->
                 </div>
             </div>
         </div>
@@ -20,15 +22,17 @@
                 <li *ngFor="let habilidades of habilidadesList" class="list-unstyled pt-3">
                     <div class="row ">
                         <div class="col-10">
-                            <h6 class="h6">{{habilidades.tecnologia}}</h6>
+                            <h6 class="h6">{{habilidades.habilidad}}</h6>
                         </div>
                         <div class="col-2 " style="text-align:right">
                             <!-- botones de edicion -->
-                            <button type="button" class="btn px-1"><i class="fa-solid fa-pen" style="width: 30px"></i>
+                            <button type="button" class="btn px-1" data-bs-toggle="modal" data-bs-target="#habilidadesModal"><i class="fa-solid fa-pen" style="width: 30px"></i>
                             </button>
                             <button type="button" class="btn ms-1"><i class="fa-solid fa-xmark" style="width: 15px"></i>
                             </button>  
-                            <!-- fin de botones de edicion -->
+                            <!-- modal editar habilidades -->
+                            <app-habilidades-modal></app-habilidades-modal>
+                            <!-- fin de modal editar habilidades -->
                             </div>
                     </div>
                     <div class="progress bg-dark bg-opacity-50 mt-0" style="margin-top:15px; height: 20px;">
