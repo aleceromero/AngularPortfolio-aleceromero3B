@@ -25,6 +25,8 @@ import { AgregarHabModalComponent } from './modales/agregar-hab-modal/agregar-ha
 import { ProyectosModalComponent } from './modales/proyectos-modal/proyectos-modal.component';
 import { AgregarProyModalComponent } from './modales/agregar-proy-modal/agregar-proy-modal.component';
 import { IndexComponent } from './componentes/index/index.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { LogoutComponent } from './componentes/logout/logout.component';
 
 
 @NgModule({
@@ -50,7 +52,9 @@ import { IndexComponent } from './componentes/index/index.component';
     AgregarHabModalComponent,
     ProyectosModalComponent,
     AgregarProyModalComponent,
-    IndexComponent
+    IndexComponent,
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
