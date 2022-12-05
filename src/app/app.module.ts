@@ -24,6 +24,7 @@ import { HabilidadesModalComponent } from './modales/habilidades-modal/habilidad
 import { AgregarHabModalComponent } from './modales/agregar-hab-modal/agregar-hab-modal.component';
 import { ProyectosModalComponent } from './modales/proyectos-modal/proyectos-modal.component';
 import { AgregarProyModalComponent } from './modales/agregar-proy-modal/agregar-proy-modal.component';
+import { IndexComponent } from './componentes/index/index.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { AgregarProyModalComponent } from './modales/agregar-proy-modal/agregar-
     HabilidadesModalComponent,
     AgregarHabModalComponent,
     ProyectosModalComponent,
-    AgregarProyModalComponent
+    AgregarProyModalComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
