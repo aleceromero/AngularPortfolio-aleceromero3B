@@ -8,12 +8,14 @@ import { GeneralMaqPortService } from 'src/app/servicios/general-maq-port.servic
 })
 export class HeaderComponent implements OnInit {
   miMaqPortfolio:any;
+  redesList:any;
   constructor(private datosPortfolio:GeneralMaqPortService) { }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data => {
       console.log(data);
       this.miMaqPortfolio=data;
+      this.redesList=data.redes;
     });
   }
 
