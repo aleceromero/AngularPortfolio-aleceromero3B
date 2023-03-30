@@ -8,15 +8,35 @@
         </div>
         <div class="modal-body">
             <!-- inicio form -->
-            <form>
+            <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                 <div class="mb-3">
                 <label for="InputAddHabilidad" class="form-label text-dark">Habilidad</label>
-                <input type="text" class="form-control" id="InputAddHabilidad" required>
+                <input type="text" class="form-control" formControlName="addHabilidad" id="InputAddHabilidad" required>
                 </div>
+                <!-- configurar cotrolador habilidad -->
+                <div *ngIf="Habilidad?.touched" >
+                  <p *ngIf="Habilidad?.hasError('required')" class="error" >
+                    La habilidad es requerida
+                  </p>
+                </div>
+                <!-- fin de configurar cotrolador habilidad-->
                 <div class="mb-3">
                 <label for="InputAddNivel" class="form-label text-dark">Nivel en %</label>
-                <input type="integer" class="form-control" id="InputAddNivel" required>
+                <input type="integer" class="form-control" formControlName="addNivel" id="InputAddNivel" required>
                 </div>
+                <!-- configurar cotrolador nivel -->
+                <div *ngIf="Nivel?.touched" >
+                  <p *ngIf="Nivel?.hasError('required')" class="error" >
+                    El porcentaje de nivel es requerido
+                  </p>
+                  <p *ngIf="Nivel?.hasError('minlength')" class="error" >
+                    El nivel debe tener más de un número
+                  </p>
+                  <p *ngIf="Nivel?.hasError('maxlength')" class="error" >
+                    El nivel debe tener hasta tres numeros
+                  </p>
+                </div>
+                <!-- fin de configurar cotrolador nivel-->
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-warning">Enviar</button>
                 </div>

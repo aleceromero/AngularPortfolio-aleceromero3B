@@ -8,23 +8,44 @@
         </div>
         <div class="modal-body">
             <!-- inicio form -->
-            <form>
+            <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                 <div class="mb-3">
-                <label for="InputAddPuesto" class="form-label text-dark">Puesto</label>
-                <input type="text" class="form-control" id="InputAddPuesto" required>
+                <label for="InputAddPuesto" class="form-label text-dark" >Puesto</label>
+                <input type="text" class="form-control" formControlName="addPuesto"  id="InputAddPuesto" required>
                 </div>
+                <!-- configurar cotrolador puesto -->
+                <div *ngIf="Puesto?.touched" >
+                  <p *ngIf="Puesto?.hasError('required')" class="error" >
+                    El puesto es requerido
+                  </p>
+                </div>
+                <!-- fin de configurar cotrolador puesto-->
                 <div class="mb-3">
                 <label for="InputAddFechaInicio" class="form-label text-dark">Fecha inicio</label>
-                <input type="date" class="form-control" id="InputAddFechaInicio" required>
+                <input type="date" class="form-control" formControlName="addFechaInicio"  id="InputAddFechaInicio" required>
                 </div>
+                <!-- configurar cotrolador FechaInicio -->
+                <div *ngIf="FechaInicio?.touched">
+                  <p *ngIf="FechaInicio?.hasError('required')" class="error">
+                    La fecha de inicio es requerida
+                  </p>
+                </div>
+                <!-- fin de configurar cotrolador FechaInicio-->
                 <div class="mb-3">
                 <label for="InputAddFechaFin" class="form-label text-dark">Fecha fin</label>
                 <input type="date" class="form-control" id="InputAddFechaFin">
                 </div>
                 <div class="mb-3">
                 <label for="InputAddEmpresa" class="form-label text-dark">Empresa</label>
-                <input type="text" class="form-control" id="InputAddEmpresa" required>
+                <input type="text" class="form-control" formControlName="addEmpresa"  id="InputAddEmpresa" required>
                 </div>
+                <!-- configurar cotrolador Empresa -->
+                <div *ngIf="Empresa?.touched">
+                  <p *ngIf="Empresa?.hasError('required')" class="error">
+                    La empresa es requerida
+                  </p>
+                </div>
+                <!-- fin de configurar cotrolador Empresa-->
                 <div class="mb-3">
                 <label for="InputAddDescripcionExp" class="form-label text-dark">Descripción</label>
                 <textarea class="form-control" id="InputAddDescripcionExp"></textarea>

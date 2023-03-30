@@ -8,24 +8,55 @@
         </div>
         <div class="modal-body">
             <!-- inicio form -->
-            <form>
+            <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                 <div class="mb-3">
                 <label for="InputNombre" class="form-label text-dark">Nombre completo</label>
-                <input type="text" class="form-control" id="InputNombre" required>
+                <input type="text" class="form-control" formControlName="nombre" id="InputNombre" required>
                 </div>
+                <!-- configurar cotrolador nombre -->
+                <div *ngIf="Nombre?.touched" >
+                  <p *ngIf="Nombre?.hasError('required')" class="error" >
+                    El nombre es requerido
+                  </p>
+                </div>
+                <!-- fin de configurar cotrolador nombre-->
                 <div class="mb-3">
                 <label for="InputFechaNacimiento" class="form-label text-dark">Fecha de nacimiento</label>
-                <input type="date" class="form-control" id="InputFechaNacimiento">
+                <input type="date" class="form-control" formControlName="fechaNacimiento" id="InputFechaNacimiento" required>
                 </div>
+                <!-- configurar cotrolador fecha nacimiento -->
+                <div *ngIf="FechaNacimiento?.touched" >
+                  <p *ngIf="FechaNacimiento?.hasError('required')" class="error" >
+                    La fecha de nacimiento es requerida
+                  </p>
+                </div>
+                <!-- fin de configurar cotrolador fecha nacimiento-->
                 <div class="mb-3">
                 <label for="InputCiudad" class="form-label text-dark">Ciudad</label>
-                <input type="text" class="form-control" id="InputCiudad">
+                <input type="text" class="form-control" formControlName="ciudad" id="InputCiudad" required>
                 </div>
-                <div class="mb-3">
+                <!-- configurar cotrolador ciudad -->
+                <div *ngIf="Ciudad?.touched" >
+                  <p *ngIf="Ciudad?.hasError('required')" class="error" >
+                    La ciudad es requerida
+                  </p>
+                </div>
+                <!-- fin de configurar cotrolador ciudad-->
                 <div class="mb-3">
                 <label for="InputEmailSobreMi" class="form-label text-dark">Email</label>
-                <input type="email" class="form-control" id="InputEmailSobreMi" aria-describedby="emailHelp">
+                <input type="email" class="form-control" formControlName="emailSobreMi" id="InputEmailSobreMi" aria-describedby="emailHelp" required>
                 </div>
+                <!-- configurar cotrolador email SobreMi -->
+                <div *ngIf="EmailSobreMi?.touched && EmailSobreMi?.errors" >
+                  <p *ngIf="EmailSobreMi?.hasError('required')" class="error" >
+                    El email es requerido
+                  </p>
+                  <p *ngIf="EmailSobreMi?.hasError('email')" class="error">
+                    El formato del email debe ser válido.
+                  </p>
+                </div>
+                <!-- fin de configurar cotrolador email SobreMi-->
+                <div class="mb-3">
                 <label for="InputSobreMi" class="form-label text-dark">Sobre Mí</label>
                 <textarea class="form-control" id="InputSobreMi"></textarea>
                 </div>

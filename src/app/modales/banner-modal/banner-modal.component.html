@@ -8,11 +8,18 @@
         </div>
         <div class="modal-body">
             <!-- inicio form -->
-            <form>
+            <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                 <div class="mb-3">
                 <label for="imgBanner" class="form-label text-dark">Imagen</label>
-                <input type="url"  class="form-control" id="imgBanner" name="imgBanner" placeholder="inserte url de imagen" required>
+                <input type="url"  class="form-control" formControlName="imgBanner" id="imgBanner" name="imgBanner" placeholder="inserte url de imagen" required>
                 </div>
+                <!-- configurar cotrolador banner -->
+                <div *ngIf="ImgBanner?.touched" >
+                  <p *ngIf="ImgBanner?.hasError('required')" class="error" >
+                    El url de imagen es requerido
+                  </p>
+                </div>
+                <!-- fin de configurar cotrolador banner-->
                 
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-warning">Enviar</button>
