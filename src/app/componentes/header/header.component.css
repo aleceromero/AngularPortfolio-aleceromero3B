@@ -1,3 +1,31 @@
 header {
     padding: 0;
 }
+
+.pad0 {
+    padding: 0;
+}
+
+.padR15 {
+    padding-right: 15px;
+}
+
+.padL10 {
+    padding-left: 10px;
+}
+
+.marg0 {
+    margin: 0;
+}
+
+.textR {
+    text-align: right;
+}
+
+.margT5 {
+    margin-top: -5%;
+}
+
+.colorBlanch {
+    color:blanchedalmond;
+}

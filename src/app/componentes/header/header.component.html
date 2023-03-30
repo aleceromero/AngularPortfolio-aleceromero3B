@@ -1,8 +1,8 @@
 <header class="container-fluid">
-    <div class="container-fluid" style="padding: 0;">
+    <div class="container-fluid pad0">
         <nav class="navbar navbar-expand-lg bg-light navbar-dark bg-dark">
             <div class="container-fluid">
-                <a href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa" target="_blank" style="padding-right:15px;"><img src="../assets/Imagenes/APLogo2.png" alt="logo Argentina Programa" height="30px"></a>
+                <a href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa" target="_blank" class="padR15"><img src="../assets/Imagenes/APLogo2.png" alt="logo Argentina Programa" height="30px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -24,13 +24,13 @@
                         <a class="nav-link" href="#proyectos">Proyectos</a>
                       </li>
                     </ul>
-                    <div class="navbar-brand " style="margin:0">
+                    <div class="navbar-brand marg0 " >
                       <ul class="nav">
-                        <li style=padding-left:10px><a href="https://github.com/aleceromero" target="_blank"><img src="../assets/Imagenes/github.png" alt="github" width="25"></a>
+                        <li class="padL10"><a href="https://github.com/aleceromero" target="_blank"><img src="../assets/Imagenes/github.png" alt="github" width="25"></a>
                         </li>
-                        <li style=padding-left:10px><a href="https://ar.linkedin.com/" target="_blank"><img src="../assets/Imagenes/linkedin.png" alt="linkedin" width="25"></a>
+                        <li class="padL10"><a href="https://ar.linkedin.com/" target="_blank"><img src="../assets/Imagenes/linkedin.png" alt="linkedin" width="25"></a>
                         </li>
-                        <li style=padding-left:10px><a href="https://instagram.com" target="_blank"><img src="../assets/Imagenes/instagram.png" alt="instagram" width="25"></a>
+                        <li class="padL10"><a href="https://instagram.com" target="_blank"><img src="../assets/Imagenes/instagram.png" alt="instagram" width="25"></a>
                         </li>
                         <li>
                           <!-- boton login -->
@@ -54,11 +54,11 @@
         </nav>
     </div>
     
-    <div class="container-fluid" style="padding:0"><img [src]="miMaqPortfolio.imgBaner" alt="imagen banner" width="100%">
+    <div class="container-fluid pad0" ><img [src]="miMaqPortfolio.imgBaner" alt="imagen banner" width="100%">
     </div>
-    <div style="text-align:right; margin-top:-5%; ">
+    <div class="textR margT5">
     <!-- boton editar imagen -->
-    <button type="button" class="btn btn-dark"  data-bs-toggle="modal" data-bs-target="#bannerModal"><i class="fa-solid fa-pen pe-2" style="color:blanchedalmond"></i>banner
+    <button type="button" class="btn btn-dark"  data-bs-toggle="modal" data-bs-target="#bannerModal"><i class="fa-solid fa-pen pe-2 colorBlanch" ></i>banner
     </button>
     <!-- modal banner -->
     <app-banner-modal></app-banner-modal>
