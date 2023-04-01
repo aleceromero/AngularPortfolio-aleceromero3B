@@ -40,6 +40,10 @@ export class LoginModalComponent implements OnInit {
     return this.Password?.touched && !this.Password?.valid;
   }
 
+  limpiar(): void{
+		this.form.reset();
+	}
+
   onEnviar(event: Event){
     // Detenemos la propagación o ejecución del compotamiento submit del form
     event.preventDefault;
