@@ -8,30 +8,55 @@
         </div>
         <div class="modal-body">
             <!-- inicio form -->
-            <form>
+            <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                 <div class="mb-3">
-                <label for="InputTitulo" class="form-label text-dark">Título</label>
-                <input type="text" class="form-control" id="InputTitulo">
+                  <label for="InputTitulo" class="form-label text-dark">Título</label>
+                  <input type="text" class="form-control" formControlName="Titulo" id="InputTitulo" required
+                  [ngClass]="{'is-invalid': Titulo?.errors && Titulo?.touched, 'is-valid': !Titulo?.errors && Titulo?.touched}">
+                </div>
+                <!-- configurar cotrolador titulo -->
+                <div *ngIf="Titulo?.touched" >
+                  <p *ngIf="Titulo?.hasError('required')" class="text-danger">
+                    El titulo es requerido
+                  </p>
+                </div>
+                <!-- fin de configurar cotrolador titulo-->
+                <div class="mb-3">
+                  <label for="InputFechaInicioEd" class="form-label text-dark">Fecha inicio</label>
+                  <input type="date" class="form-control" formControlName="FechaInicioEd" id="InputFechaInicioEd" required
+                  [ngClass]="{'is-invalid': FechaInicioEd?.errors && FechaInicioEd?.touched, 'is-valid': !FechaInicioEd?.errors && FechaInicioEd?.touched}">
+                </div>
+                <!-- configurar cotrolador FechaInicio -->
+                <div *ngIf="FechaInicioEd?.touched">
+                  <p *ngIf="FechaInicioEd?.hasError('required')" class="text-danger">
+                    La fecha de inicio es requerida
+                  </p>
+                </div>
+                <!-- fin de configurar cotrolador FechaInicio-->
+                <div class="mb-3">
+                  <label for="InputFechaFinEd" class="form-label text-dark">Fecha fin</label>
+                  <input type="date" class="form-control" id="InputFechaFinEd">
                 </div>
                 <div class="mb-3">
-                <label for="InputFechaInicioEd" class="form-label text-dark">Fecha inicio</label>
-                <input type="date" class="form-control" id="InputFechaInicioEd">
+                  <label for="InputEstablecimiento" class="form-label text-dark">Establecimiento</label>
+                  <input type="text" class="form-control" formControlName="Establecimiento" id="InputEstablecimiento" required
+                  [ngClass]="{'is-invalid': Establecimiento?.errors && Establecimiento?.touched, 'is-valid': !Establecimiento?.errors && Establecimiento?.touched}">
                 </div>
-                <div class="mb-3">
-                <label for="InputFechaFinEd" class="form-label text-dark">Fecha fin</label>
-                <input type="date" class="form-control" id="InputFechaFinEd">
+                <!-- configurar cotrolador Establecimiento -->
+                <div *ngIf="Establecimiento?.touched">
+                  <p *ngIf="Establecimiento?.hasError('required')" class="text-danger">
+                    El establecimiento es requerido
+                  </p>
                 </div>
+                <!-- fin de configurar cotrolador Establecimiento-->
                 <div class="mb-3">
-                <label for="InputEstablecimiento" class="form-label text-dark">Establecimiento</label>
-                <input type="text" class="form-control" id="InputEstablecimiento">
-                </div>
-                <div class="mb-3">
-                <label for="InputDescripcionEd" class="form-label text-dark">Descripción</label>
-                <textarea class="form-control" id="InputDescripcionEd"></textarea>
+                  <label for="InputDescripcionEd" class="form-label text-dark">Descripción</label>
+                  <textarea class="form-control" id="InputDescripcionEd"></textarea>
                 </div>
 
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-warning">Enviar</button>
+                  <button type="button" class="btn btn-outline-secondary" (click)="limpiar()">Limpiar</button>
+                  <button type="submit" class="btn btn-warning">Enviar</button>
                 </div>
                 
             </form>

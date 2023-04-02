@@ -35,19 +35,6 @@ export class AgregarEdModalComponent implements OnInit {
     return this.form.get("addEstablecimiento");
   }
 
-  // metodos validacion
-  get TituloInvalid(){
-    return this.Titulo?.touched;
-  }
-
-  get FechaInicioEdInvalid(){
-    return this.FechaInicioEd?.touched;
-  }
-
-  get EstablecimientoInvalid(){
-    return this.Establecimiento?.touched;
-  }
-
   limpiar(): void{
 		this.form.reset();
 	}
