@@ -36,21 +36,10 @@ export class AgregarExpModalComponent implements OnInit {
     return this.form.get("addEmpresa");
   }
 
-  // metodo validacion touch del puesto
-  // get PuestoValid(){
-  //   return this.Puesto?.touched;
-  // }
-
-  // metodo validacion touch del FechaInicio
-  // get FechaInicioValid(){
-  // return this.FechaInicio?.touched;
-  // }
-
-  // metodo validacion touch del Empresa
-  // get EmpresaValid(){
-  // return this.Empresa?.touched;
-  // }
-
+  limpiar(): void{
+		this.form.reset();
+	}
+  
   onEnviar(event: Event){
   // Detenemos la propagación o ejecución del compotamiento submit del form
     event.preventDefault;
