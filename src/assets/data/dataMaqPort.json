@@ -1,49 +1,51 @@
 {
     "imgBaner": "https://i.ibb.co/B28b5CL/ban03.png",
-    "nombre": "Alejandra Cecilia Romero",
-    "imgPerfil": "https://i.ibb.co/7Nrq8k5/avatar-Perfil-copia.jpg",
+    "nombre": "Alejandra Cecilia",
+    "apellido": "Romero",
+    "imgPerfil": "https://i.ibb.co/VpWsQNC/avatar-Perfil.jpg",
     "ciudad": "Buenos Aires",
     "pais": "Argentina",
-    "mail": "aleceromero@gmail.com",
+    "email": "aleceromero@gmail.com",
+    "edad": "38 años",
     "sobreMi": "texto sobre mi Lorem ipsum dolor sit amet consectetur a contar un breve resumen añsodifnasd vf ñaoisdf añl nañsodi nañosicjn añsoi añoisdjnañsdknc ñoaisd ñasdnc añosic  ñaosdncñoasdkcn isdf añl nañsodi nañosicjn añsoi añoisdjnañsdknc ñoaisd ñasdnc añosic  ñaosdncñoasdkcn ",
     "experiencia": [{
             "puesto": "Operadora - Data Entry",
-            "start": "Octubre 2009",
-            "end": "Enero 2013",
+            "fechaInicio": "Octubre 2009",
+            "fechaFin": "Enero 2013",
             "empresa": "Ases Consulting",
             "descripcion": "Auditoria manual de resoluciones complejas en servicio de normalización de datos y geocodificación. Resolución manual de casos que la herramienta o proceso no pudo resolver Asistencia en la creación de mapas utilizados para la geocodificación a través del programa MapInfo"
         },
         {
             "puesto": "Experiencia 2",
-            "start": "inicio 02",
-            "end": "final 02",
+            "fechaInicio": "inicio 02",
+            "fechaFin": "final 02",
             "empresa": "Empresa 2",
             "descripcion": "Descripcion 02 de la experiencia Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
         },
         {
             "puesto": "Experiencia 3",
-            "start": "inicio 03",
-            "end": "final 03",
+            "fechaInicio": "inicio 03",
+            "fechaFin": "final 03",
             "empresa": "Empresa 3",
             "descripcion": "Descripcion 03 de la experiencia Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
         }],
     "educacion":[{
             "titulo": "Título 1",
-            "start": "inicio 01",
-            "end": "final 01",
+            "fechaInicio": "inicio 01",
+            "fechaFin": "final 01",
             "establecimiento": "Establecimiento 1",
             "descripcion": "Descripcion 01 de la educacion Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
         },
         {
             "titulo": "Título 2",
-            "start": "inicio 02",
-            "end": "final 02",
+            "fechaInicio": "inicio 02",
+            "fechaFin": "final 02",
             "establecimiento": "Establecimiento 2",
             "descripcion": "Descripcion 02 de la educacion Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
         },
         {   "titulo": "Título 2",
-            "start": "inicio 03",
-            "end": "final 03",
+            "fechaInicio": "inicio 03",
+            "fechaFin": "final 03",
             "establecimiento": "Establecimiento 3",
             "descripcion": "Descripcion 03 de la educacion Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
         }],
@@ -65,12 +67,12 @@
             "nivel" : 45
     }],
     "proyectos": [{
-            "nombre": "Proyecto1",
+            "proyecto": "Proyecto1",
             "descripcion": "01Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.",
             "imgProyecto": "https://i.ibb.co/YTy26XZ/proyect01.png",
             "urlProyecto": "https://aleceromero.wixsite.com/ojota"
         },
-        {   "nombre": "Proyecto2",
+        {   "proyecto": "Proyecto2",
             "descripcion": "02Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.",
             "imgProyecto": "https://i.ibb.co/8YHCWhR/card-Image01.webp",
             "urlProyecto": ""

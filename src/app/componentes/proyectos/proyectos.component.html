@@ -23,7 +23,7 @@
             <div *ngFor="let proyectos of proyectosList" class="col-md-5" style="margin:15px">
                 <div class="card mb-3 text-white bg-dark h-100">
                     <a [href]="proyectos.urlProyecto" target="_blank"><img [src]="proyectos.imgProyecto" class="card-img-top" alt="proyecto1" width="25%"></a>
-                    <div class="card-body"><h5 class="h5">{{proyectos.nombre}}</h5>
+                    <div class="card-body"><h5 class="h5">{{proyectos.proyecto}}</h5>
                         <p class="card-text">{{proyectos.descripcion}}</p>
                         <!-- botones de edicion -->
                         <div style="text-align:right">
