@@ -10,12 +10,13 @@
             <!-- inicio form -->
             <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                 <div class="mb-3">
-                <label for="imgBanner" class="form-label text-dark">Imagen</label>
-                <input type="url"  class="form-control" formControlName="imgBanner" id="imgBanner" name="imgBanner" placeholder="inserte url de imagen" required>
+                  <label for="imgBanner" class="form-label text-dark">Imagen</label>
+                  <input type="url"  class="form-control" formControlName="imgBanner" id="imgBanner" name="imgBanner" placeholder="inserte url de imagen" required
+                  [ngClass]="{'is-invalid': ImgBanner?.errors && ImgBanner?.touched, 'is-valid': !ImgBanner?.errors && ImgBanner?.touched}">
                 </div>
                 <!-- configurar cotrolador banner -->
                 <div *ngIf="ImgBanner?.touched" >
-                  <p *ngIf="ImgBanner?.hasError('required')" class="error" >
+                  <p *ngIf="ImgBanner?.hasError('required')" class="text-danger" >
                     El url de imagen es requerido
                   </p>
                 </div>
