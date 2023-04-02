@@ -34,7 +34,7 @@ export class AgregarEdModalComponent implements OnInit {
   get Establecimiento(){
     return this.form.get("addEstablecimiento");
   }
-
+  
   limpiar(): void{
 		this.form.reset();
 	}

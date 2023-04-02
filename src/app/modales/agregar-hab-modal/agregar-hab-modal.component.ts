@@ -31,13 +31,12 @@ export class AgregarHabModalComponent implements OnInit {
     return this.form.get("addNivel");
   }
 
-  // metodo validacion Nivel
-  getNivelInvalid(){
-    return this.Nivel?.touched && this.Nivel?.valid;
-  }
+  limpiar(): void{
+		this.form.reset();
+	}
 
   onEnviar(event: Event){
-    // Detenemos la propagación o ejecución del compotamiento submit del form
+    // Detenemos la propagación o ejecución del comportamiento submit del form
     event.preventDefault;
 
     if (this.form.valid){
