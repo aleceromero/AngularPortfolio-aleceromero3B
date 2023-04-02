@@ -48,20 +48,20 @@
         }],
     "habilidades":[{
             "habilidad": "HTML",
-            "nivel" : "20"
+            "nivel" : 20
         },
         {   "habilidad": "CSS",
-            "nivel" : "35" 
+            "nivel" : 35
         },
         {  "habilidad": "Angular",
-            "nivel" : "50"
+            "nivel" : 50
         },
         {
             "habilidad": "GIT",
-            "nivel" : "65"
+            "nivel" : 65
         },
         {   "habilidad": "SQL",
-            "nivel" : "45"
+            "nivel" : 45
     }],
     "proyectos": [{
             "nombre": "Proyecto1",

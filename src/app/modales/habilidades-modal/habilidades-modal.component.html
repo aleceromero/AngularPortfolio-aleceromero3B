@@ -8,17 +8,40 @@
         </div>
         <div class="modal-body">
             <!-- inicio form -->
-            <form>
+            <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                 <div class="mb-3">
-                <label for="InputHabilidad" class="form-label text-dark">Habilidad</label>
-                <input type="text" class="form-control" id="InputHabilidad">
+                  <label for="InputHabilidad" class="form-label text-dark">Habilidad</label>
+                  <input type="text" class="form-control" formControlName="Habilidad" id="InputHabilidad"
+                  [ngClass]="{'is-invalid': Habilidad?.errors && Habilidad?.touched, 'is-valid': !Habilidad?.errors && Habilidad?.touched}">
                 </div>
+                <!-- configurar cotrolador habilidad -->
+                <div *ngIf="Habilidad?.touched" >
+                  <p *ngIf="Habilidad?.hasError('required')" class="text-danger">
+                    La habilidad es requerida
+                  </p>
+                </div>
+                <!-- fin de configurar cotrolador habilidad-->
                 <div class="mb-3">
-                <label for="InputNivel" class="form-label text-dark">Nivel en %</label>
-                <input type="integer" class="form-control" id="InputNivel">
+                  <label for="InputNivel" class="form-label text-dark">Nivel en %</label>
+                  <input type="number" min="1" max="100" class="form-control" formControlName="Nivel" id="InputNivel"
+                  [ngClass]="{'is-invalid': Nivel?.errors && Nivel?.touched, 'is-valid': !Nivel?.errors && Nivel?.touched}">
                 </div>
+                <!-- configurar cotrolador nivel -->
+                <div *ngIf="Nivel?.touched" >
+                  <p *ngIf="Nivel?.hasError('required')" class="text-danger" >
+                    El porcentaje de nivel es requerido
+                  </p>
+                  <p *ngIf="Nivel?.hasError('min')" class="text-danger" >
+                    El porcentaje minimo es 1
+                  </p>
+                  <p *ngIf="Nivel?.hasError('max')" class="text-danger" >
+                    El porcentaje maximo es 100
+                  </p>
+                </div>
+                <!-- fin de configurar cotrolador nivel-->
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-warning">Enviar</button>
+                  <button type="button" class="btn btn-outline-secondary" (click)="limpiar()">Limpiar</button>
+                  <button type="submit" class="btn btn-warning">Enviar</button>
                 </div>
                 
             </form>
