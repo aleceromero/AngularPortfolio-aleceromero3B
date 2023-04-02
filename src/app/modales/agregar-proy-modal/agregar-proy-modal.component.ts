@@ -37,6 +37,10 @@ export class AgregarProyModalComponent implements OnInit {
     return this.form.get("addUrlProyecto");
   }
 
+  limpiar(): void{
+		this.form.reset();
+	}
+
   onEnviar(event: Event){
     // Detenemos la propagación o ejecución del compotamiento submit del form
       event.preventDefault;

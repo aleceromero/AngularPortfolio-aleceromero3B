@@ -2,7 +2,8 @@
     "imgBaner": "../assets/Imagenes/ban03.png",
     "nombre": "Alejandra Cecilia Romero",
     "imgPerfil": "../assets/Imagenes/avatarPerfil.jpg",
-    "ciudad": "Buenos Aires, Argentina",
+    "ciudad": "Buenos Aires",
+    "pais": "Argentina",
     "mail": "aleceromero@gmail.com",
     "sobreMi": "texto sobre mi Lorem ipsum dolor sit amet consectetur a contar un breve resumen añsodifnasd vf ñaoisdf añl nañsodi nañosicjn añsoi añoisdjnañsdknc ñoaisd ñasdnc añosic  ñaosdncñoasdkcn isdf añl nañsodi nañosicjn añsoi añoisdjnañsdknc ñoaisd ñasdnc añosic  ñaosdncñoasdkcn ",
     "experiencia": [{
