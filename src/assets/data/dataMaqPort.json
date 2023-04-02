@@ -1,7 +1,7 @@
 {
-    "imgBaner": "../assets/Imagenes/ban03.png",
+    "imgBaner": "https://i.ibb.co/B28b5CL/ban03.png",
     "nombre": "Alejandra Cecilia Romero",
-    "imgPerfil": "../assets/Imagenes/avatarPerfil.jpg",
+    "imgPerfil": "https://i.ibb.co/7Nrq8k5/avatar-Perfil-copia.jpg",
     "ciudad": "Buenos Aires",
     "pais": "Argentina",
     "mail": "aleceromero@gmail.com",
@@ -67,12 +67,12 @@
     "proyectos": [{
             "nombre": "Proyecto1",
             "descripcion": "01Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.",
-            "imgProyecto": "../assets/Imagenes/proyect01.png",
+            "imgProyecto": "https://i.ibb.co/YTy26XZ/proyect01.png",
             "urlProyecto": "https://aleceromero.wixsite.com/ojota"
         },
         {   "nombre": "Proyecto2",
             "descripcion": "02Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.",
-            "imgProyecto": "../assets/Imagenes/cardImage01.webp",
+            "imgProyecto": "https://i.ibb.co/8YHCWhR/card-Image01.webp",
             "urlProyecto": ""
     }]
     
