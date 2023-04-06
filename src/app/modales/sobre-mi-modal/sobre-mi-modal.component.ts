@@ -17,6 +17,9 @@ export class SobreMiModalComponent implements OnInit {
       nombre:['', [Validators.required]],
       fechaNacimiento:['', [Validators.required]],
       ciudad:['', [Validators.required]],
+      pais:['', [Validators.required]],
+      imgPerfil:['', [Validators.required]],
+      imgBanner:['', [Validators.required]],
       emailSobreMi:['', [Validators.required, Validators.email]],
     })
   }
@@ -37,8 +40,20 @@ export class SobreMiModalComponent implements OnInit {
     return this.form.get("ciudad");
   }
 
+  get Pais(){
+    return this.form.get("pais");
+  }
+
   get EmailSobreMi(){
     return this.form.get("emailSobreMi");
+  }
+
+  get ImgPerfil(){
+    return this.form.get("imgPerfil");
+  }
+
+  get ImgBanner(){
+    return this.form.get("imgBanner");
   }
 
   // metodo validacion email
