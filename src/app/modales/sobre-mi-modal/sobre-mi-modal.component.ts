@@ -15,7 +15,7 @@ export class SobreMiModalComponent implements OnInit {
     // grupo de controles formulario
     this.form = this.formBuilder.group({
       nombre:['', [Validators.required]],
-      fechaNacimiento:['', [Validators.required]],
+      edad:['', [Validators.required]],
       ciudad:['', [Validators.required]],
       pais:['', [Validators.required]],
       imgPerfil:['', [Validators.required]],
@@ -32,8 +32,8 @@ export class SobreMiModalComponent implements OnInit {
     return this.form.get("nombre");
   }
 
-  get FechaNacimiento(){
-    return this.form.get("fechaNacimiento");
+  get Edad(){
+    return this.form.get("edad");
   }
 
   get Ciudad(){

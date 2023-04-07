@@ -22,17 +22,20 @@
                 </div>
                 <!-- fin de configurar cotrolador nombre-->
                 <div class="mb-3">
-                  <label for="InputFechaNacimiento" class="form-label text-dark">Fecha de nacimiento</label>
-                  <input type="date" class="form-control" formControlName="fechaNacimiento" id="InputFechaNacimiento" required
-                  [ngClass]="{'is-invalid': FechaNacimiento?.errors && FechaNacimiento?.touched, 'is-valid': !FechaNacimiento?.errors && FechaNacimiento?.touched}">
+                  <label for="InputEdad" class="form-label text-dark">Edad en años</label>
+                  <input type="number" min="1" class="form-control" formControlName="edad" id="InputEdad" required
+                  [ngClass]="{'is-invalid': Edad?.errors && Edad?.touched, 'is-valid': !Edad?.errors && Edad?.touched}">
                 </div>
-                <!-- configurar cotrolador fecha nacimiento -->
-                <div *ngIf="FechaNacimiento?.touched" >
-                  <p *ngIf="FechaNacimiento?.hasError('required')" class="text-danger">
-                    La fecha de nacimiento es requerida
+                <!-- configurar cotrolador edad -->
+                <div *ngIf="Edad?.touched" >
+                  <p *ngIf="Edad?.hasError('required')" class="text-danger">
+                    La edad es requerida
+                  </p>
+                  <p *ngIf="Edad?.hasError('min')" class="text-danger" >
+                    La edad minima es 1
                   </p>
                 </div>
-                <!-- fin de configurar cotrolador fecha nacimiento-->
+                <!-- fin de configurar cotrolador edad-->
                 <div class="mb-3">
                   <label for="InputCiudad" class="form-label text-dark">Ciudad</label>
                   <input type="text" class="form-control" formControlName="ciudad" id="InputCiudad" required

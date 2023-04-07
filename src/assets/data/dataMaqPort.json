@@ -1,11 +1,11 @@
 {
-    "imgBaner": "https://i.ibb.co/B28b5CL/ban03.png",
+    "imgBanner": "https://i.ibb.co/B28b5CL/ban03.png",
     "nombreCompleto": "Alejandra Cecilia Romero",
     "imgPerfil": "https://i.ibb.co/VpWsQNC/avatar-Perfil.jpg",
     "ciudad": "Buenos Aires",
     "pais": "Argentina",
     "email": "aleceromero@gmail.com",
-    "edad": "38 años",
+    "edad": 38,
     "sobreMi": "texto sobre mi Lorem ipsum dolor sit amet consectetur a contar un breve resumen añsodifnasd vf ñaoisdf añl nañsodi nañosicjn añsoi añoisdjnañsdknc ñoaisd ñasdnc añosic  ñaosdncñoasdkcn isdf añl nañsodi nañosicjn añsoi añoisdjnañsdknc ñoaisd ñasdnc añosic  ñaosdncñoasdkcn ",
     "experiencia": [{
             "puesto": "Operadora - Data Entry",
