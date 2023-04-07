@@ -15,37 +15,43 @@
             "descripcion": "Auditoria manual de resoluciones complejas en servicio de normalización de datos y geocodificación. Resolución manual de casos que la herramienta o proceso no pudo resolver Asistencia en la creación de mapas utilizados para la geocodificación a través del programa MapInfo"
         },
         {
-            "puesto": "Experiencia 2",
+            "puesto": "Atención al cliente telefónica",
             "fechaInicio": "inicio 02",
             "fechaFin": "final 02",
             "empresa": "Empresa 2",
             "descripcion": "Descripcion 02 de la experiencia Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
         },
         {
-            "puesto": "Experiencia 3",
+            "puesto": "Organización de eventos",
             "fechaInicio": "inicio 03",
             "fechaFin": "final 03",
             "empresa": "Empresa 3",
             "descripcion": "Descripcion 03 de la experiencia Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
         }],
     "educacion":[{
-            "titulo": "Título 1",
-            "fechaInicio": "inicio 01",
-            "fechaFin": "final 01",
-            "establecimiento": "Establecimiento 1",
+            "titulo": "Técnica en Diseño y Promoción Publicitaria",
+            "fechaInicio": "Marzo 1998",
+            "fechaFin": "Dicimembre 2003",
+            "establecimiento": "E.T. N°6 Fernando Fader",
             "descripcion": "Descripcion 01 de la educacion Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
         },
         {
-            "titulo": "Título 2",
-            "fechaInicio": "inicio 02",
-            "fechaFin": "final 02",
-            "establecimiento": "Establecimiento 2",
+            "titulo": "Licenciatura en Artes Visuales",
+            "fechaInicio": "Marzo 2004",
+            "fechaFin": "Diciembre 2012",
+            "establecimiento": "Universidad Nacional de Arte",
             "descripcion": "Descripcion 02 de la educacion Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
         },
-        {   "titulo": "Título 2",
+        {   "titulo": "Electricista",
             "fechaInicio": "inicio 03",
             "fechaFin": "final 03",
             "establecimiento": "Establecimiento 3",
+            "descripcion": "Descripcion 03 de la educacion Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
+        },
+        {   "titulo": "Programadora",
+            "fechaInicio": "2022",
+            "fechaFin": "2023",
+            "establecimiento": "Argentina Programa",
             "descripcion": "Descripcion 03 de la educacion Lorem ipsum dolor sit amet consectetur adipiscing elit parturient, laoreet eleifend dui blandit vehicula eros phasellus ut, etiam ultricies varius neque ante accumsan nibh."
         }],
     "habilidades":[{
@@ -66,13 +72,13 @@
             "nivel" : 45
     }],
     "proyectos": [{
-            "proyecto": "Proyecto1",
-            "descripcion": "01Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.",
+            "proyecto": "OJOTA - Fotografías",
+            "descripcion": "01 Texto proyecto1 Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.",
             "imgProyecto": "https://i.ibb.co/YTy26XZ/proyect01.png",
             "urlProyecto": "https://aleceromero.wixsite.com/ojota"
         },
         {   "proyecto": "Proyecto2",
-            "descripcion": "02Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.",
+            "descripcion": "02 Texto proyecto2 Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.",
             "imgProyecto": "https://i.ibb.co/8YHCWhR/card-Image01.webp",
             "urlProyecto": ""
     }]
