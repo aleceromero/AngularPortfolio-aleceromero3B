@@ -1,21 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { GeneralMaqPortService } from 'src/app/servicios/general-maq-port.service';
+import { Educacion } from 'src/app/model/educacion';
+import { EducacionService } from 'src/app/servicios/educacion.service';
+
 
 @Component({
   selector: 'app-educacion',
   templateUrl: './educacion.component.html',
   styleUrls: ['./educacion.component.css']
 })
+
 export class EducacionComponent implements OnInit {
-  miMaqPortfolio:any;
-  educacionList:any;
-  constructor(private datosPortfolio:GeneralMaqPortService) { }
+  estudios: Educacion[]=[];  //se llama al modelo educacion
+
+  constructor(private eduServ:EducacionService) { }
+
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      this.miMaqPortfolio=data;
-      this.educacionList=data.educacion;
-    })
+    this.cargarEducacion();
+  }
+
+  cargarEducacion(): void {
+    this.eduServ.getEstudios().subscribe(data => {this.estudios = data})
   }
 
 }

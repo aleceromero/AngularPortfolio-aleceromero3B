@@ -17,7 +17,7 @@
                 <!-- fin modal agregar educacion -->
             </div>
             <ul class="ps-1">
-                <li *ngFor="let educacion of educacionList" class="list-unstyled">
+                <li *ngFor="let educacion of estudios" class="list-unstyled">
                     <div class="row ">
                         <div class="col-10">
                             <h5 class="h5 fw-bold">{{educacion.titulo}}</h5>
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <h6 class="text-uppercase">{{educacion.establecimiento}}</h6>
-                    <P class="fst-italic">{{educacion.fechaInicio}} - {{educacion.fechaFin}} </P>
+                    <P class="fst-italic">{{educacion.fechaInicio}} / {{educacion.fechaFin}} </P>
                     {{educacion.descripcion}}
                     <hr size="1px" color="#fdf1c9" />
                 </li>
