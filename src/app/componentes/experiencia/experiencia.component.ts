@@ -16,12 +16,11 @@ export class ExperienciaComponent implements OnInit {
   
 
   ngOnInit(): void {
-    this.cargarExperiencia();
-    
+    this.cargarExperiencia();    
   }
 
   cargarExperiencia():void{
-    this.expeServ.getExperiencias().subscribe(data => {this.experiencias = data})
+    this.expeServ.getExperiencias().subscribe(data => {this.experiencias = data});
   }
 
 }

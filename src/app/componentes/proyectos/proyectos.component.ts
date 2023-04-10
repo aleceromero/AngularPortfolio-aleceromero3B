@@ -1,21 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { GeneralMaqPortService } from 'src/app/servicios/general-maq-port.service';
+import { Proyecto } from 'src/app/model/proyecto';
+import { ProyectoService } from 'src/app/servicios/proyecto.service';
+
 
 @Component({
   selector: 'app-proyectos',
   templateUrl: './proyectos.component.html',
   styleUrls: ['./proyectos.component.css']
 })
+
 export class ProyectosComponent implements OnInit {
-  miMaqPortfolio:any;
-  proyectosList:any;
-  constructor(private datosPortfolio:GeneralMaqPortService) { }
+  proyectos: Proyecto[]=[]; //se llama al modelo proyecto  
+
+  constructor(private proyectServ:ProyectoService) { }
+
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      this.miMaqPortfolio=data;
-      this.proyectosList=data.proyectos;
-    })
+    this.cargarProyecto();
+  }
+
+  cargarProyecto(): void {
+    this.proyectServ.getProyectos().subscribe(data => {this.proyectos = data});
   }
 
 }
