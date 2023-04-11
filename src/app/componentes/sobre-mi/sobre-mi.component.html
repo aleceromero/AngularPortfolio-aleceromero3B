@@ -1,7 +1,7 @@
 <div class="container-fluid" style="margin-bottom:1px; margin-top:0">
-    <div id="sobreMi" class="row rounded">
+    <div id="sobreMi" class="row rounded" *ngFor="let persona of personas">
         <div class="col-8 col-sm-3 col-md-2 offset-2 offset-sm-0 offset-md-0">
-            <img [src]="miMaqPortfolio.imgPerfil" alt="Mi foto" width="100%" class="rounded-circle" style="margin-top:-50%">
+            <img [src]="persona.imgPerfil" alt="Mi foto" width="100%" class="rounded-circle" style="margin-top:-50%">
             <div style="text-align:right">
                 <!-- boton de editar foto perfil -->
                 <!-- <button type="button" class="btn btn-outline-dark" style="margin-top:-13%" data-bs-toggle="modal" data-bs-target="#imgPerfilModal"><i class="fa-solid fa-pen"></i>
@@ -15,15 +15,15 @@
         <div class="col-12 col-sm-9 col-md-10 " style="color:#010101">
             <div class="row">
                 <div class="col-10">
-                    <h2 class="h2">{{miMaqPortfolio.nombreCompleto}}</h2>
-                    <p>{{miMaqPortfolio.ciudad}}, {{miMaqPortfolio.pais}}</p>
+                    <h2 class="h2">{{persona.nombreCompleto}}</h2>
+                    <p>{{persona.ciudad}}, {{persona.pais}}</p>
                 </div>
                 <!-- boton de edicion -->
                 <div class="col-2" >
                     <div id="sobreMiEdit" class="d-flex flex-row-reverse">
                     
-                        <button type="button" class="btn ms-1 btn-outline-dark"><i class="fa-solid fa-xmark" style="width: 15px;"></i>
-                        </button>
+                        <!--<button type="button" class="btn ms-1 btn-outline-dark"><i class="fa-solid fa-xmark" style="width: 15px;"></i>
+                        </button> -->
                         <button type="button" class="btn px-1 btn-outline-dark" data-bs-toggle="modal" data-bs-target="#sobreMiModal"><i class="fa-solid fa-pen" style="width: 30px;"></i>
                         </button>
                     </div>    
@@ -33,7 +33,7 @@
                 <app-sobre-mi-modal></app-sobre-mi-modal> 
                  
             </div>
-            <p>{{miMaqPortfolio.sobreMi}}</p>
+            <p>{{persona.sobreMi}}</p>
         </div>
         
     </div>
