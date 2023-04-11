@@ -1,22 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { GeneralMaqPortService } from 'src/app/servicios/general-maq-port.service';
+import { Persona } from 'src/app/model/persona';
+import { PersonaService } from 'src/app/servicios/persona.service';
+
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
+
 export class HeaderComponent implements OnInit {
-  miMaqPortfolio:any;
-  redesList:any;
-  constructor(private datosPortfolio:GeneralMaqPortService) { }
+  personas: Persona[]=[]; //llamamos al modelo persona  
+
+  constructor(private persoServ:PersonaService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      console.log(data);
-      this.miMaqPortfolio=data;
-      this.redesList=data.redes;
-    });
+    this.cargarPersona();
+  }
+
+  cargarPersona(): void {
+    this.persoServ.getPersonas().subscribe(data => {this.personas = data});
   }
 
 }
