@@ -20,16 +20,16 @@
             </div>
         </div>
         <div class="row justify-content-center" style="margin:0;" >
-            <div *ngFor="let proyectos of proyectos" class="col-md-5" style="margin:15px">
+            <div *ngFor="let proyecto of proyectos" class="col-md-5" style="margin:15px">
                 <div class="card mb-3 text-white bg-dark h-100">
-                    <a [href]="proyectos.urlProyecto" target="_blank"><img [src]="proyectos.imgProyecto" class="card-img-top" alt="proyecto1" width="25%"></a>
-                    <div class="card-body"><h5 class="h5">{{proyectos.proyecto}}</h5>
-                        <p class="card-text">{{proyectos.descripcion}}</p>
+                    <a [href]="proyecto.urlProyecto" target="_blank"><img [src]="proyecto.imgProyecto" class="card-img-top" alt="proyecto1" width="25%"></a>
+                    <div class="card-body"><h5 class="h5">{{proyecto.proyecto}}</h5>
+                        <p class="card-text">{{proyecto.descripcion}}</p>
                         <!-- botones de edicion -->
                         <div style="text-align:right">
                             <button type="button" class="btn px-1  btn-dark" data-bs-toggle="modal" data-bs-target="#proyectosModal"><i class="fa-solid fa-pen" style="width: 30px; color:blanchedalmond"></i>
                             </button>
-                            <button type="button" class="btn ms-1 btn-dark"><i class="fa-solid fa-xmark" style="width: 15px; color:blanchedalmond"></i>
+                            <button type="button" class="btn ms-1 btn-dark" (click)="delete(proyecto.id)"><i class="fa-solid fa-xmark" style="width: 15px; color:blanchedalmond"></i>
                             </button>   
                         </div>
                         <!-- modal editar proyecto -->

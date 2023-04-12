@@ -1,6 +1,6 @@
 export class Persona {
 
-    id?:number;
+    id!:number;
     nombreCompleto:string;
     ciudad:string;
     pais:string;

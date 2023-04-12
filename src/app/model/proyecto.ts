@@ -1,6 +1,6 @@
 export class Proyecto {
 
-    id?:number;
+    id!:number;
     proyecto:string;
     imgProyecto:string;
     urlProyecto:string;

@@ -23,4 +23,11 @@ export class ProyectosComponent implements OnInit {
     this.proyectServ.getProyectos().subscribe(data => {this.proyectos = data});
   }
 
+  delete(id:number){
+    if(confirm("Querés eliminar este proyecto?")){
+      this.proyectServ.deleteProyecto(id).subscribe(data => {this.cargarProyecto();});
+      window.location.reload();
+    }
+  }
+
 }
