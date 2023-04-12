@@ -24,7 +24,7 @@ export class ExperienciaComponent implements OnInit {
   }
 
   delete(id:number) {
-    if(confirm("Querés eliminar este estudio?")){
+    if(confirm("Querés eliminar esta experiencia?")){
       this.expeServ.deleteExperiencia(id).subscribe(data => {this.cargarExperiencia();});
       window.location.reload();
     }

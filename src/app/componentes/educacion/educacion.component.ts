@@ -23,4 +23,11 @@ export class EducacionComponent implements OnInit {
     this.eduServ.getEstudios().subscribe(data => {this.estudios = data})
   }
 
+  delete(id:number): void{
+    if(confirm("Querés eliminar esta educación?")){
+      this.eduServ.deleteEducacion(id).subscribe(data => {this.cargarEducacion();});
+      window.location.reload();
+    }
+  }
+
 }
