@@ -11,7 +11,7 @@
             <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                 <div class="mb-3">
                   <label for="InputAddProyecto" class="form-label text-dark">Nombre</label>
-                  <input type="text" class="form-control" formControlName="addProyecto" id="InputAddProyecto" required
+                  <input type="text" class="form-control" formControlName="addProyecto" [(ngModel)]="proyecto" id="InputAddProyecto" required
                   [ngClass]="{'is-invalid': Proyecto?.errors && Proyecto?.touched, 'is-valid': !Proyecto?.errors && Proyecto?.touched}">
                 </div>
                 <!-- configurar cotrolador proyecto -->
@@ -23,7 +23,7 @@
                 <!-- fin de configurar cotrolador proyecto-->
                 <div class="mb-3">
                   <label for="addImgProyecto" class="form-label text-dark">Imagen</label>
-                  <input type="url"  class="form-control" formControlName="addImgProyecto" id="addImgProyecto" name="addImgProyecto" placeholder="inserte url de imagen" required
+                  <input type="url"  class="form-control" formControlName="addImgProyecto" [(ngModel)]="imgProyecto" id="addImgProyecto" name="addImgProyecto" placeholder="inserte url de imagen" required
                   [ngClass]="{'is-invalid': ImgProyecto?.errors && ImgProyecto?.touched, 'is-valid': !ImgProyecto?.errors && ImgProyecto?.touched}">
                 </div>
                 <!-- configurar cotrolador imagen -->
@@ -35,7 +35,7 @@
                 <!-- fin de configurar cotrolador imagen-->
                 <div class="mb-3">
                   <label for="addUrlProyecto" class="form-label text-dark">Dirección</label>
-                  <input type="url"  class="form-control" formControlName="addUrlProyecto" id="addUrlProyecto" name="addUrlProyecto" placeholder="inserte url del proyecto" required
+                  <input type="url"  class="form-control" formControlName="addUrlProyecto" [(ngModel)]="urlProyecto" id="addUrlProyecto" name="addUrlProyecto" placeholder="inserte url del proyecto" required
                   [ngClass]="{'is-invalid': UrlProyecto?.errors && UrlProyecto?.touched, 'is-valid': !UrlProyecto?.errors && UrlProyecto?.touched}">
                 </div>
                 <!-- configurar cotrolador url proyecto -->
@@ -47,7 +47,7 @@
                 <!-- fin de configurar cotrolador url proyecto-->
                 <div class="mb-3">
                   <label for="InputAddDescripcionProy" class="form-label text-dark">Descripción</label>
-                  <textarea class="form-control" id="InputAddDescripcionProy"></textarea>
+                  <textarea class="form-control" id="InputAddDescripcionProy" formControlName="addDescripcionPr" [(ngModel)]="descripcion"></textarea>
                 </div>
                
                 <div class="modal-footer">
