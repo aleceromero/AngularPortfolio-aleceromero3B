@@ -19,16 +19,16 @@
         </div>
         <div class="container-fluid">
             <ul class="px-1 ">
-                <li *ngFor="let habilidades of habilidades" class="list-unstyled pt-3">
+                <li *ngFor="let habilidad of habilidades" class="list-unstyled pt-3">
                     <div class="row ">
                         <div class="col-10">
-                            <h6 class="h6">{{habilidades.habilidad}}</h6>
+                            <h6 class="h6">{{habilidad.habilidad}}</h6>
                         </div>
                         <div class="col-2 text-end">
                             <!-- botones de edicion -->
                             <button type="button" class="btn px-1" data-bs-toggle="modal" data-bs-target="#habilidadesModal"><i class="fa-solid fa-pen" style="width: 30px"></i>
                             </button>
-                            <button type="button" class="btn ms-1"><i class="fa-solid fa-xmark" style="width: 15px"></i>
+                            <button type="button" class="btn ms-1" (click)="delete(habilidad.id)"><i class="fa-solid fa-xmark" style="width: 15px"></i>
                             </button>  
                             <!-- modal editar habilidades -->
                             <app-habilidades-modal></app-habilidades-modal>
@@ -36,7 +36,7 @@
                             </div>
                     </div>
                     <div class="progress bg-dark bg-opacity-50 mt-0" style="margin-top:15px; height: 20px;">
-                        <div class="progress-bar bg-info bg-opacity-75" role="progressbar" [style.width.%]="habilidades.nivel" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">{{habilidades.nivel}}%</div>
+                        <div class="progress-bar bg-info bg-opacity-75" role="progressbar" [style.width.%]="habilidad.nivel" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">{{habilidad.nivel}}%</div>
                     </div>   
                 </li>
             </ul>

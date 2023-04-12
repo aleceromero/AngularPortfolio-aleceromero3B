@@ -1,6 +1,6 @@
 export class Habilidad {
 
-    id?:number;
+    id!:number;
     habilidad:string;
     nivel:number;
     descripcion:string;

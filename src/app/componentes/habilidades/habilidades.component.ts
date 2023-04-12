@@ -23,4 +23,11 @@ export class HabilidadesComponent implements OnInit {
     this.habServ.getHabilidades().subscribe(data => {this.habilidades = data})
   }
 
+  delete(id:number){
+    if(confirm("Querés eliminar esta habilidad?")){
+      this.habServ.deleteHabilidad(id).subscribe(data => {this.cargarHabilidad();});
+      window.location.reload();
+    }
+  }
+
 }
