@@ -1,6 +1,6 @@
 export class Experiencia {
 
-    id?:number;
+    id!:number;
     puesto:string;
     fechaInicio:string;
     fechaFin:string;
