@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Habilidad } from 'src/app/model/habilidad';
+import { HabilidadService } from 'src/app/servicios/habilidad.service';
 
 @Component({
   selector: 'app-agregar-hab-modal',
@@ -10,12 +12,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AgregarHabModalComponent implements OnInit {
 
   form: FormGroup;
+  habilidad: string = '';
+  nivel: number = 0;
+  descripcion: string = '';
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private habServ:HabilidadService) {
     // grupo de controles formulario
     this.form = this.formBuilder.group({
     addHabilidad:['',[Validators.required]],
     addNivel:['',[Validators.required, Validators.maxLength(3)]],
+    addDescripcionHab:[''],
     })
    }
 
@@ -31,6 +37,10 @@ export class AgregarHabModalComponent implements OnInit {
     return this.form.get("addNivel");
   }
 
+  get DescripcionEd(){
+    return this.form.get("addDescripcionHab");
+  }
+
   limpiar(): void{
 		this.form.reset();
 	}
@@ -41,11 +51,19 @@ export class AgregarHabModalComponent implements OnInit {
 
     if (this.form.valid){
     // Llamamos a nuestro servicio para enviar los datos al servidor
-      alert("Todo salio bien ¡Enviar formuario!")
+      this.onCreate();
     } else {
-    // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
+    // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template  
+    alert("Falló la carga, intente nuevamente");   
       this.form.markAllAsTouched(); 
     }
+  }
+
+  onCreate(): void {
+    const hab = new Habilidad(this.habilidad, this.nivel, this.descripcion);
+      this.habServ.saveHabilidad(hab).subscribe(data => {});
+      window.location.reload();
+      alert("habilidad añadida");
   }
 
 }
