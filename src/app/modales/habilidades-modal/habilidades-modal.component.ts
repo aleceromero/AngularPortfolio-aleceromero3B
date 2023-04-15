@@ -14,8 +14,10 @@ export class HabilidadesModalComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) {
     // grupo de controles formulario
     this.form = this.formBuilder.group({
-      Habilidad:['',[Validators.required]],
-      Nivel:['',[Validators.required, Validators.maxLength(3)]],
+      id:[''],
+      habilidad:['',[Validators.required]],
+      nivel:['',[Validators.required, Validators.maxLength(3)]],
+      descripcion:[''],
       })
    }
 
@@ -24,11 +26,15 @@ export class HabilidadesModalComponent implements OnInit {
 
   // metodos para el formulario
   get Habilidad(){
-    return this.form.get("Habilidad");
+    return this.form.get("habilidad");
   }
 
   get Nivel(){
-    return this.form.get("Nivel");
+    return this.form.get("nivel");
+  }
+
+  get Descripcion(){
+    return this.form.get("descripcion");
   }
 
   limpiar(): void{

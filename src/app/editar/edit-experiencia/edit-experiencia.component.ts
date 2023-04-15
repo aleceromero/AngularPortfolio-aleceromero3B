@@ -25,7 +25,7 @@ export class EditExperienciaComponent implements OnInit {
       empresa:['', [Validators.required]],
       descripcion:[''],
     })
-   }
+  }
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];

@@ -30,6 +30,7 @@ import { LoginComponent } from './componentes/login/login.component';
 import { LogoutComponent } from './componentes/logout/logout.component';
 import { EditExperienciaComponent } from './editar/edit-experiencia/edit-experiencia.component';
 import { EditEducacionComponent } from './editar/edit-educacion/edit-educacion.component';
+import { EditHabilidadComponent } from './editar/edit-habilidad/edit-habilidad.component';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { EditEducacionComponent } from './editar/edit-educacion/edit-educacion.c
     LoginComponent,
     LogoutComponent,
     EditExperienciaComponent,
-    EditEducacionComponent
+    EditEducacionComponent,
+    EditHabilidadComponent
   ],
   imports: [
     BrowserModule,
