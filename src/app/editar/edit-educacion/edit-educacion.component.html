@@ -1,0 +1,70 @@
+<body class="p-4">
+    <div class="container-fluid">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-dark" id="educacionModalLabel">Editar educación</h1>
+              <button type="button" class="btn-close" routerLink="/" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- inicio form -->
+                <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="estudiosForm">
+                    <input type="hidden" formControlName="id" [ngModel]="educacion.id">
+                    <div class="mb-3">
+                      <label for="InputTitulo" class="form-label text-dark">Título</label>
+                      <input type="text" class="form-control" formControlName="titulo" [ngModel]="educacion.titulo" id="InputTitulo" required
+                      [ngClass]="{'is-invalid': Titulo?.errors && Titulo?.touched, 'is-valid': !Titulo?.errors && Titulo?.touched}">
+                    </div>
+                    <!-- configurar cotrolador titulo -->
+                    <div *ngIf="Titulo?.touched" >
+                      <p *ngIf="Titulo?.hasError('required')" class="text-danger">
+                        El titulo es requerido
+                      </p>
+                    </div>
+                    <!-- fin de configurar cotrolador titulo-->
+                    <div class="mb-3">
+                      <label for="InputFechaInicio" class="form-label text-dark">Fecha inicio</label>
+                      <input type="date" class="form-control" formControlName="fechaInicio" [ngModel]="educacion.fechaInicio" id="InputFechaInicio" required
+                      [ngClass]="{'is-invalid': FechaInicio?.errors && FechaInicio?.touched, 'is-valid': !FechaInicio?.errors && FechaInicio?.touched}">
+                    </div>
+                    <!-- configurar cotrolador FechaInicio -->
+                    <div *ngIf="FechaInicio?.touched">
+                      <p *ngIf="FechaInicio?.hasError('required')" class="text-danger">
+                        La fecha de inicio es requerida
+                      </p>
+                    </div>
+                    <!-- fin de configurar cotrolador FechaInicio-->
+                    <div class="mb-3">
+                      <label for="InputFechaFin" class="form-label text-dark">Fecha fin</label>
+                      <input type="date" class="form-control" formControlName="fechaFin" [ngModel]="educacion.fechaFin" id="InputFechaFin">
+                    </div>
+                    <div class="mb-3">
+                      <label for="InputEstablecimiento" class="form-label text-dark">Establecimiento</label>
+                      <input type="text" class="form-control" formControlName="establecimiento" [ngModel]="educacion.establecimiento" id="InputEstablecimiento" required
+                      [ngClass]="{'is-invalid': Establecimiento?.errors && Establecimiento?.touched, 'is-valid': !Establecimiento?.errors && Establecimiento?.touched}">
+                    </div>
+                    <!-- configurar cotrolador Establecimiento -->
+                    <div *ngIf="Establecimiento?.touched">
+                      <p *ngIf="Establecimiento?.hasError('required')" class="text-danger">
+                        El establecimiento es requerido
+                      </p>
+                    </div>
+                    <!-- fin de configurar cotrolador Establecimiento-->
+                    <div class="mb-3">
+                      <label for="InputDescripcion" class="form-label text-dark">Descripción</label>
+                      <textarea class="form-control" formControlName="descripcion" [ngModel]="educacion.descripcion" id="InputDescripcion"></textarea>
+                    </div>
+    
+                    <div class="modal-footer">
+                      <!--
+                      <button type="button" class="btn btn-outline-secondary" (click)="limpiar()">Limpiar</button>-->
+                      <button type="submit" class="btn btn-warning">Enviar</button>
+                    </div>
+                    
+                </form>
+                <!-- fin del form -->
+    
+            </div>
+            
+          </div>   
+    </div>
+</body>

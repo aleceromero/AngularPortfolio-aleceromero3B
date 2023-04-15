@@ -29,6 +29,7 @@ import { IndexComponent } from './componentes/index/index.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { LogoutComponent } from './componentes/logout/logout.component';
 import { EditExperienciaComponent } from './editar/edit-experiencia/edit-experiencia.component';
+import { EditEducacionComponent } from './editar/edit-educacion/edit-educacion.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { EditExperienciaComponent } from './editar/edit-experiencia/edit-experie
     IndexComponent,
     LoginComponent,
     LogoutComponent,
-    EditExperienciaComponent
+    EditExperienciaComponent,
+    EditEducacionComponent
   ],
   imports: [
     BrowserModule,
