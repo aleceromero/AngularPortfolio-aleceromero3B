@@ -1,0 +1,69 @@
+<body class="p-4">
+  <div class="container-fluid">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5 text-dark" id="experienciaModalLabel">Editar experiencia</h1>
+      <button type="button" class="btn-close" routerLink="/" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <!-- inicio form -->
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="experienciaForm">
+            <input type="hidden" formControlName="id" [ngModel]="experiencia.id">
+            <div class="mb-3">
+              <label for="InputPuesto" class="form-label text-dark">Puesto</label>
+              <input type="text" class="form-control" formControlName="puesto" [ngModel]="experiencia.puesto" id="InputPuesto" required
+              [ngClass]="{'is-invalid': Puesto?.errors && Puesto?.touched, 'is-valid': !Puesto?.errors && Puesto?.touched}">
+            </div>
+            <!-- configurar cotrolador puesto -->
+            <div *ngIf="Puesto?.touched" >
+              <p *ngIf="Puesto?.hasError('required')" class="text-danger">
+                El puesto es requerido
+              </p>
+            </div>
+            <!-- fin de configurar cotrolador puesto-->
+            <div class="mb-3">
+              <label for="InputFechaInicio" class="form-label text-dark">Fecha inicio</label>
+              <input type="date" class="form-control" formControlName="fechaInicio" [ngModel]="experiencia.fechaInicio" id="InputFechaInicio" required
+              [ngClass]="{'is-invalid': FechaInicio?.errors && FechaInicio?.touched, 'is-valid': !FechaInicio?.errors && FechaInicio?.touched}">
+            </div>
+            <!-- configurar cotrolador FechaInicio -->
+            <div *ngIf="FechaInicio?.touched">
+              <p *ngIf="FechaInicio?.hasError('required')" class="text-danger">
+                La fecha de inicio es requerida
+              </p>
+            </div>
+            <!-- fin de configurar cotrolador FechaInicio-->
+            <div class="mb-3">
+              <label for="InputFechaFin" class="form-label text-dark">Fecha fin</label>
+              <input type="date" class="form-control" formControlName="fechaFin" [ngModel]="experiencia.fechaFin" id="InputFechaFin">
+            </div>
+            <div class="mb-3">
+              <label for="InputEmpresa" class="form-label text-dark">Empresa</label>
+              <input type="text" class="form-control" formControlName="empresa" [ngModel]="experiencia.empresa" id="InputEmpresa"
+              [ngClass]="{'is-invalid': Empresa?.errors && Empresa?.touched, 'is-valid': !Empresa?.errors && Empresa?.touched}">
+            </div>
+            <!-- configurar cotrolador Empresa -->
+            <div *ngIf="Empresa?.touched">
+              <p *ngIf="Empresa?.hasError('required')" class="text-danger">
+                La empresa es requerida
+              </p>
+            </div>
+            <!-- fin de configurar cotrolador Empresa-->
+            <div class="mb-3">
+              <label for="InputDescripcionExp" class="form-label text-dark">Descripción</label>
+              <textarea class="form-control" formControlName="descripcion" [ngModel]="experiencia.descripcion" id="InputDescripcionExp"></textarea>
+            </div>
+
+            <div class="modal-footer">
+              <!--<button type="button" class="btn btn-outline-secondary" (click)="limpiar()">Limpiar</button>-->
+              <button type="submit" class="btn btn-warning">Enviar</button>
+            </div>
+            
+        </form>
+        <!-- fin del form -->
+
+    </div>
+    
+  </div>
+</div>
+</body>

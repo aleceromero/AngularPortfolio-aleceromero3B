@@ -28,6 +28,7 @@ import { AgregarProyModalComponent } from './modales/agregar-proy-modal/agregar-
 import { IndexComponent } from './componentes/index/index.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { LogoutComponent } from './componentes/logout/logout.component';
+import { EditExperienciaComponent } from './editar/edit-experiencia/edit-experiencia.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { LogoutComponent } from './componentes/logout/logout.component';
     AgregarProyModalComponent,
     IndexComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    EditExperienciaComponent
   ],
   imports: [
     BrowserModule,
