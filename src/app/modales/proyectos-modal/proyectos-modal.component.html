@@ -11,7 +11,7 @@
             <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                 <div class="mb-3">
                   <label for="InputProyecto" class="form-label text-dark">Nombre</label>
-                  <input type="text" class="form-control" formControlName="Proyecto" id="InputProyecto"
+                  <input type="text" class="form-control" formControlName="proyecto" id="InputProyecto"
                   [ngClass]="{'is-invalid': Proyecto?.errors && Proyecto?.touched, 'is-valid': !Proyecto?.errors && Proyecto?.touched}">
                 </div>
                 <!-- configurar cotrolador proyecto -->
@@ -23,7 +23,7 @@
                 <!-- fin de configurar cotrolador proyecto-->
                 <div class="mb-3">
                   <label for="imgProyecto" class="form-label text-dark">Imagen</label>
-                  <input type="url"  class="form-control" formControlName="ImgProyecto" id="imgProyecto" name="imgProyecto" placeholder="inserte url de imagen"
+                  <input type="url"  class="form-control" formControlName="imgProyecto" id="imgProyecto" name="imgProyecto" placeholder="inserte url de imagen"
                   [ngClass]="{'is-invalid': ImgProyecto?.errors && ImgProyecto?.touched, 'is-valid': !ImgProyecto?.errors && ImgProyecto?.touched}">
                 </div>
                 <!-- configurar cotrolador imagen -->
@@ -35,7 +35,7 @@
                 <!-- fin de configurar cotrolador imagen-->
                 <div class="mb-3">
                   <label for="urlProyecto" class="form-label text-dark">Dirección</label>
-                  <input type="url"  class="form-control" formControlName="UrlProyecto" id="urlProyecto" name="urlProyecto" placeholder="inserte url del proyecto"
+                  <input type="url"  class="form-control" formControlName="urlProyecto" id="urlProyecto" name="urlProyecto" placeholder="inserte url del proyecto"
                   [ngClass]="{'is-invalid': UrlProyecto?.errors && UrlProyecto?.touched, 'is-valid': !UrlProyecto?.errors && UrlProyecto?.touched}">
                 </div>
                 <!-- configurar cotrolador url proyecto -->
@@ -47,7 +47,7 @@
                 <!-- fin de configurar cotrolador url proyecto-->
                 <div class="mb-3">
                   <label for="InputDescripcionProy" class="form-label text-dark">Descripción</label>
-                  <textarea class="form-control" id="InputDescripcionProy"></textarea>
+                  <textarea class="form-control" formControlName="descripcion" id="InputDescripcion"></textarea>
                 </div>
                
                 <div class="modal-footer">

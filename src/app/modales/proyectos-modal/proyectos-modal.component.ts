@@ -14,9 +14,11 @@ export class ProyectosModalComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) {
     // grupo de controles formulario
     this.form = this.formBuilder.group({
-      Proyecto:['', [Validators.required]],
-      ImgProyecto:['', [Validators.required]],
-      UrlProyecto:['', [Validators.required]],
+      id:[''],
+      proyecto:['', [Validators.required]],
+      imgProyecto:['', [Validators.required]],
+      urlProyecto:['', [Validators.required]],
+      descripcion:[''],
     })
    }
 
@@ -25,15 +27,15 @@ export class ProyectosModalComponent implements OnInit {
 
    // metodos para el formulario
    get Proyecto(){
-    return this.form.get("Proyecto");
+    return this.form.get("proyecto");
   }
 
   get ImgProyecto(){
-    return this.form.get("ImgProyecto");
+    return this.form.get("imgProyecto");
   }
 
   get UrlProyecto(){
-    return this.form.get("UrlProyecto");
+    return this.form.get("urlProyecto");
   }
 
   limpiar(): void{

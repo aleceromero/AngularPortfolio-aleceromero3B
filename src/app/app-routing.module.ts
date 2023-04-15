@@ -5,12 +5,14 @@ import { IndexComponent } from './componentes/index/index.component';
 import { EditExperienciaComponent } from './editar/edit-experiencia/edit-experiencia.component';
 import { EditEducacionComponent } from './editar/edit-educacion/edit-educacion.component';
 import { EditHabilidadComponent } from './editar/edit-habilidad/edit-habilidad.component';
+import { EditProyectoComponent } from './editar/edit-proyecto/edit-proyecto.component';
 
 const routes: Routes = [
   {path: '', component: IndexComponent},
   {path: 'editExperiencia/:id', component: EditExperienciaComponent},
   {path: 'editEducacion/:id', component: EditEducacionComponent},
   {path: 'editHabilidad/:id', component: EditHabilidadComponent},
+  {path: 'editProyecto/:id', component: EditProyectoComponent},
   {path: '**', component: Error404Component},
 ];
 

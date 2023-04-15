@@ -27,7 +27,7 @@
                         <p class="card-text">{{proyecto.descripcion}}</p>
                         <!-- botones de edicion -->
                         <div style="text-align:right">
-                            <button type="button" class="btn px-1  btn-dark" data-bs-toggle="modal" data-bs-target="#proyectosModal"><i class="fa-solid fa-pen" style="width: 30px; color:blanchedalmond"></i>
+                            <button type="button" class="btn px-1  btn-dark" routerLink="editProyecto/{{proyecto.id}}"><i class="fa-solid fa-pen" style="width: 30px; color:blanchedalmond"></i>
                             </button>
                             <button type="button" class="btn ms-1 btn-dark" (click)="delete(proyecto.id)"><i class="fa-solid fa-xmark" style="width: 15px; color:blanchedalmond"></i>
                             </button>   

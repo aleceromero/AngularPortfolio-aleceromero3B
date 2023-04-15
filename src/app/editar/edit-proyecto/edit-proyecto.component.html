@@ -1,0 +1,64 @@
+<body class="p-4">
+    <div class="container-fluid">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-dark" id="proyectosModalLabel">Editar proyecto</h1>
+              <button type="button" class="btn-close" routerLink="/" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- inicio form -->
+                <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="proyectoForm">
+                    <input type="hidden" formControlName="id" [ngModel]="proyecto.id">
+                    <div class="mb-3">
+                      <label for="InputProyecto" class="form-label text-dark">Nombre</label>
+                      <input type="text" class="form-control" formControlName="proyecto" [ngModel]="proyecto.proyecto" id="InputProyecto"
+                      [ngClass]="{'is-invalid': Proyecto?.errors && Proyecto?.touched, 'is-valid': !Proyecto?.errors && Proyecto?.touched}">
+                    </div>
+                    <!-- configurar cotrolador proyecto -->
+                    <div *ngIf="Proyecto?.touched" >
+                      <p *ngIf="Proyecto?.hasError('required')" class="text-danger" >
+                        El nombre del proyecto es requerido
+                      </p>
+                    </div>
+                    <!-- fin de configurar cotrolador proyecto-->
+                    <div class="mb-3">
+                      <label for="imgProyecto" class="form-label text-dark">Imagen</label>
+                      <input type="url"  class="form-control" formControlName="imgProyecto" [ngModel]="proyecto.imgProyecto" id="imgProyecto" name="imgProyecto" placeholder="inserte url de imagen"
+                      [ngClass]="{'is-invalid': ImgProyecto?.errors && ImgProyecto?.touched, 'is-valid': !ImgProyecto?.errors && ImgProyecto?.touched}">
+                    </div>
+                    <!-- configurar cotrolador imagen -->
+                    <div *ngIf="ImgProyecto?.touched" >
+                      <p *ngIf="ImgProyecto?.hasError('required')" class="text-danger" >
+                        El url de imagen es requerido
+                      </p>
+                    </div>
+                    <!-- fin de configurar cotrolador imagen-->
+                    <div class="mb-3">
+                      <label for="urlProyecto" class="form-label text-dark">Dirección</label>
+                      <input type="url"  class="form-control" formControlName="urlProyecto" [ngModel]="proyecto.urlProyecto" id="urlProyecto" name="urlProyecto" placeholder="inserte url del proyecto"
+                      [ngClass]="{'is-invalid': UrlProyecto?.errors && UrlProyecto?.touched, 'is-valid': !UrlProyecto?.errors && UrlProyecto?.touched}">
+                    </div>
+                    <!-- configurar cotrolador url proyecto -->
+                    <div *ngIf="UrlProyecto?.touched" >
+                      <p *ngIf="UrlProyecto?.hasError('required')" class="text-danger" >
+                        El url del proyecto es requerido
+                      </p>
+                    </div>
+                    <!-- fin de configurar cotrolador url proyecto-->
+                    <div class="mb-3">
+                      <label for="InputDescripcionProy" class="form-label text-dark">Descripción</label>
+                      <textarea class="form-control" formControlName="descripcion" [ngModel]="proyecto.descripcion" id="InputDescripcion"></textarea>
+                    </div>
+                   
+                    <div class="modal-footer">
+                      <button type="submit" class="btn btn-warning">Enviar</button>
+                    </div>
+                    
+                </form>
+                <!-- fin del form -->
+    
+            </div>
+            
+          </div>
+    </div>
+</body>
