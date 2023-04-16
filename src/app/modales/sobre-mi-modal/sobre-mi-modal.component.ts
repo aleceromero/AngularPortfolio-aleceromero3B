@@ -14,13 +14,15 @@ export class SobreMiModalComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) { 
     // grupo de controles formulario
     this.form = this.formBuilder.group({
-      nombre:['', [Validators.required]],
-      edad:['', [Validators.required]],
+      id:[''],
+      nombreCompleto:['', [Validators.required]],
       ciudad:['', [Validators.required]],
       pais:['', [Validators.required]],
-      imgPerfil:['', [Validators.required]],
+      emailContacto:['', [Validators.required, Validators.email]],
       imgBanner:['', [Validators.required]],
-      emailSobreMi:['', [Validators.required, Validators.email]],
+      imgPerfil:['', [Validators.required]],
+      sobreMi:[''],
+      edad:[''],
     })
   }
 
@@ -28,12 +30,8 @@ export class SobreMiModalComponent implements OnInit {
   }
 
   // metodos para el formulario
-  get Nombre(){
-    return this.form.get("nombre");
-  }
-
-  get Edad(){
-    return this.form.get("edad");
+  get NombreCompleto(){
+    return this.form.get("nombreCompleto");
   }
 
   get Ciudad(){
@@ -44,23 +42,27 @@ export class SobreMiModalComponent implements OnInit {
     return this.form.get("pais");
   }
 
-  get EmailSobreMi(){
-    return this.form.get("emailSobreMi");
-  }
-
-  get ImgPerfil(){
-    return this.form.get("imgPerfil");
+  get EmailContacto(){
+    return this.form.get("emailContacto")
   }
 
   get ImgBanner(){
     return this.form.get("imgBanner");
   }
 
-  // metodo validacion email
-  get EmailInvalid() {
-    return this.EmailSobreMi?.touched && !this.EmailSobreMi?.valid;
+  get ImgPerfil(){
+    return this.form.get("imgPerfil");
   }
 
+  get SobreMi(){
+    return this.form.get("sobreMi");
+  }
+
+  get Edad(){
+    return this.form.get("edad");
+  }
+
+  
   limpiar(): void{
 		this.form.reset();
 	}

@@ -11,13 +11,13 @@
             <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                 <div class="mb-3">
                   <label for="InputNombre" class="form-label text-dark">Nombre completo</label>
-                  <input type="text" class="form-control" formControlName="nombre" id="InputNombre" required
-                  [ngClass]="{'is-invalid': Nombre?.errors && Nombre?.touched, 'is-valid': !Nombre?.errors && Nombre?.touched}">
+                  <input type="text" class="form-control" formControlName="nombreCompleto" id="InputNombreCompleto" required
+                  [ngClass]="{'is-invalid': NombreCompleto?.errors && NombreCompleto?.touched, 'is-valid': !NombreCompleto?.errors && NombreCompleto?.touched}">
                 </div>
                 <!-- configurar cotrolador nombre -->
-                <div *ngIf="Nombre?.touched" >
-                  <p *ngIf="Nombre?.hasError('required')" class="text-danger">
-                    El nombre es requerido
+                <div *ngIf="NombreCompleto?.touched" >
+                  <p *ngIf="NombreCompleto?.hasError('required')" class="text-danger">
+                    El nombre completo es requerido
                   </p>
                 </div>
                 <!-- fin de configurar cotrolador nombre-->
@@ -62,15 +62,15 @@
                 <!-- fin de configurar cotrolador pais-->
                 <div class="mb-3">
                   <label for="InputEmailSobreMi" class="form-label text-dark">Email de contacto</label>
-                  <input type="email" class="form-control" formControlName="emailSobreMi" id="InputEmailSobreMi" aria-describedby="emailHelp" required
-                  [ngClass]="{'is-invalid': EmailSobreMi?.errors && EmailSobreMi?.touched, 'is-valid': !EmailSobreMi?.errors && EmailSobreMi?.touched}">
+                  <input type="email" class="form-control" formControlName="emailContacto" id="InputEmailContacto" aria-describedby="emailHelp" required
+                  [ngClass]="{'is-invalid': EmailContacto?.errors && EmailContacto?.touched, 'is-valid': !EmailContacto?.errors && EmailContacto?.touched}">
                 </div>
                 <!-- configurar cotrolador email SobreMi -->
-                <div *ngIf="EmailSobreMi?.touched && EmailSobreMi?.errors" >
-                  <p *ngIf="EmailSobreMi?.hasError('required')" class="text-danger">
+                <div *ngIf="EmailContacto?.touched && EmailContacto?.errors" >
+                  <p *ngIf="EmailContacto?.hasError('required')" class="text-danger">
                     El email es requerido
                   </p>
-                  <p *ngIf="EmailSobreMi?.hasError('email')" class="text-danger">
+                  <p *ngIf="EmailContacto?.hasError('email')" class="text-danger">
                     El formato del email debe ser válido.
                   </p>
                 </div>
@@ -101,7 +101,7 @@
                 <!-- fin de configurar cotrolador banner-->
                 <div class="mb-3">
                   <label for="InputSobreMi" class="form-label text-dark">Sobre Mí</label>
-                  <textarea class="form-control" id="InputSobreMi"></textarea>
+                  <textarea class="form-control" formControlName="sobreMi" id="InputSobreMi"></textarea>
                 </div>
 
                 <div class="modal-footer">

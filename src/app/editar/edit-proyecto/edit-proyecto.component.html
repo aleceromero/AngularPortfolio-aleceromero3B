@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5 text-dark" id="proyectosModalLabel">Editar proyecto</h1>
+              <h1 class="modal-title fs-5 text-dark pb-4" id="proyectosModalLabel">Editar proyecto</h1>
               <button type="button" class="btn-close" routerLink="/" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -50,7 +50,7 @@
                       <textarea class="form-control" formControlName="descripcion" [ngModel]="proyecto.descripcion" id="InputDescripcion"></textarea>
                     </div>
                    
-                    <div class="modal-footer">
+                    <div class="modal-footer pt-3 d-flex justify-content-center">
                       <button type="submit" class="btn btn-warning">Enviar</button>
                     </div>
                     

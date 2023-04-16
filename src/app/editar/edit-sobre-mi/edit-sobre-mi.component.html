@@ -1,0 +1,118 @@
+<body class="p-4">
+    <div class="container-fluid">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-dark pb-4" id="sobreMiModalLabel">Editar Perfil</h1>
+              <button type="button" class="btn-close" routerLink="/" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- inicio form -->
+                <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="personaForm">
+                    <input type="hidden" formControlName="id" [ngModel]="persona.id">
+                    <div class="mb-3">
+                      <label for="InputNombre" class="form-label text-dark">Nombre completo</label>
+                      <input type="text" class="form-control" formControlName="nombreCompleto" [ngModel]="persona.nombreCompleto" id="InputNombreCompleto" required
+                      [ngClass]="{'is-invalid': NombreCompleto?.errors && NombreCompleto?.touched, 'is-valid': !NombreCompleto?.errors && NombreCompleto?.touched}">
+                    </div>
+                    <!-- configurar cotrolador nombre -->
+                    <div *ngIf="NombreCompleto?.touched" >
+                      <p *ngIf="NombreCompleto?.hasError('required')" class="text-danger">
+                        El nombre completo es requerido
+                      </p>
+                    </div>
+                    <!-- fin de configurar cotrolador nombre-->
+                    <div class="mb-3">
+                      <label for="InputEdad" class="form-label text-dark">Edad en años</label>
+                      <input type="number" min="1" class="form-control" formControlName="edad" [ngModel]="persona.edad" id="InputEdad" required
+                      [ngClass]="{'is-invalid': Edad?.errors && Edad?.touched, 'is-valid': !Edad?.errors && Edad?.touched}">
+                    </div>
+                    <!-- configurar cotrolador edad -->
+                    <div *ngIf="Edad?.touched" >
+                      <p *ngIf="Edad?.hasError('required')" class="text-danger">
+                        La edad es requerida
+                      </p>
+                      <p *ngIf="Edad?.hasError('min')" class="text-danger" >
+                        La edad minima es 1
+                      </p>
+                    </div>
+                    <!-- fin de configurar cotrolador edad-->
+                    <div class="mb-3">
+                      <label for="InputCiudad" class="form-label text-dark">Ciudad</label>
+                      <input type="text" class="form-control" formControlName="ciudad" [ngModel]="persona.ciudad" id="InputCiudad" required
+                      [ngClass]="{'is-invalid': Ciudad?.errors && Ciudad?.touched, 'is-valid': !Ciudad?.errors && Ciudad?.touched}">
+                    </div>
+                    <!-- configurar cotrolador ciudad -->
+                    <div *ngIf="Ciudad?.touched" >
+                      <p *ngIf="Ciudad?.hasError('required')" class="text-danger">
+                        La ciudad de residencia es requerida
+                      </p>
+                    </div>
+                    <!-- fin de configurar cotrolador ciudad-->
+                    <div class="mb-3">
+                      <label for="InputPais" class="form-label text-dark">País</label>
+                      <input type="text" class="form-control" formControlName="pais" [ngModel]="persona.pais" id="InputPais" required
+                      [ngClass]="{'is-invalid': Pais?.errors && Pais?.touched, 'is-valid': !Pais?.errors && Pais?.touched}">
+                    </div>
+                    <!-- configurar cotrolador pais -->
+                    <div *ngIf="Pais?.touched" >
+                      <p *ngIf="Pais?.hasError('required')" class="text-danger">
+                        El país de residencia es requerido
+                      </p>
+                    </div>
+                    <!-- fin de configurar cotrolador pais-->
+                    <div class="mb-3">
+                      <label for="InputEmailContacto" class="form-label text-dark">Email de contacto</label>
+                      <input type="email" class="form-control" formControlName="emailContacto" [ngModel]="persona.emailContacto" id="InputEmailContacto" aria-describedby="emailHelp" required
+                      [ngClass]="{'is-invalid': EmailContacto?.errors && EmailContacto?.touched, 'is-valid': !EmailContacto?.errors && EmailContacto?.touched}">
+                    </div>
+                    <!-- configurar cotrolador email SobreMi -->
+                    <div *ngIf="EmailContacto?.touched && EmailContacto?.errors" >
+                      <p *ngIf="EmailContacto?.hasError('required')" class="text-danger">
+                        El email es requerido
+                      </p>
+                      <p *ngIf="EmailContacto?.hasError('email')" class="text-danger">
+                        El formato del email debe ser válido.
+                      </p>
+                    </div>
+                    <!-- fin de configurar cotrolador email SobreMi-->
+                    <div class="mb-3">
+                      <label for="imgPerfil" class="form-label text-dark">Imagen de perfil</label>
+                      <input type="url"  class="form-control" formControlName="imgPerfil" [ngModel]="persona.imgPerfil" id="imgPerfil" name="imgPerfil" placeholder="inserte url de imagen perfil" required
+                      [ngClass]="{'is-invalid': ImgPerfil?.errors && ImgPerfil?.touched, 'is-valid': !ImgPerfil?.errors && ImgPerfil?.touched}">
+                    </div>
+                    <!-- configurar cotrolador imagen perfil -->
+                    <div *ngIf="ImgPerfil?.touched" >
+                      <p *ngIf="ImgPerfil?.hasError('required')" class="text-danger">
+                        El url de imagen es requerido
+                      </p>
+                    </div>
+                    <!-- fin de configurar cotrolador imagen perfil-->
+                    <div class="mb-3">
+                      <label for="imgBanner" class="form-label text-dark">Imagen de banner</label>
+                      <input type="url"  class="form-control" formControlName="imgBanner" [ngModel]="persona.imgBanner" id="imgBanner" name="imgBanner" placeholder="inserte url de imagen" required
+                      [ngClass]="{'is-invalid': ImgBanner?.errors && ImgBanner?.touched, 'is-valid': !ImgBanner?.errors && ImgBanner?.touched}">
+                    </div>
+                    <!-- configurar cotrolador banner -->
+                    <div *ngIf="ImgBanner?.touched" >
+                      <p *ngIf="ImgBanner?.hasError('required')" class="text-danger" >
+                        El url de imagen es requerido
+                      </p>
+                    </div>
+                    <!-- fin de configurar cotrolador banner-->
+                    <div class="mb-3">
+                      <label for="InputSobreMi" class="form-label text-dark">Sobre Mí</label>
+                      <textarea class="form-control" formControlName="sobreMi" [ngModel]="persona.sobreMi" id="InputSobreMi"></textarea>
+                    </div>
+    
+                    <div class="modal-footer pt-3 d-flex justify-content-center">
+                      <button type="submit" class="btn btn-warning">Enviar</button>
+                    </div>
+                    
+                </form>
+                <!-- fin del form -->
+    
+            </div>
+            
+          </div>
+    </div>
+</body>
