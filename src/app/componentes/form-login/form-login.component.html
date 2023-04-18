@@ -1,0 +1,57 @@
+<body class="p-4">
+    <div class="container-fluid">
+        <div class="row align-self-center">
+        <div class="col-md-6 offset-md-3 p-4" style="background-color: white;">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-dark pb-4" id="loginModalLabel">Login de usuario</h1>
+              <button type="button" class="btn-close" routerLink="/" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- inicio form -->
+                <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                    <div class="mb-3">
+                      <label for="InputEmail" class="form-label text-dark">Email</label>
+                      <input type="email" class="form-control" formControlName="emailLogin" id="InputEmail" aria-describedby="emailHelp"
+                      [ngClass]="{'is-invalid': EmailLogin?.errors && EmailLogin?.touched, 'is-valid': !EmailLogin?.errors && EmailLogin?.touched}">
+                    </div>
+                    <!-- configurar cotrolador email -->
+                    <div *ngIf="EmailLogin?.touched && EmailLogin?.errors" >
+                      <p *ngIf="EmailLogin?.hasError('required')" class="text-danger h6" >
+                        El email es requerido
+                      </p>
+                      <p *ngIf="EmailLogin?.hasError('email')" class="text-danger h6">
+                        El formato del email debe ser válido.
+                      </p>
+                    </div>
+                    <!-- fin de configurar cotrolador email-->
+                    <div class="mb-3">
+                      <label for="InputPassword" class="form-label text-dark">Contraseña</label>
+                      <input type="password" class="form-control" formControlName="password" id="InputPassword"
+                      [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}">
+                    </div>
+                    <!-- configurar cotrolador pasword -->
+                    <div *ngIf="Password?.errors && Password?.touched" >
+                      <p *ngIf="Password?.hasError('required')" class="text-danger h6" >
+                        La contraseña es requerida
+                      </p>
+                      <p *ngIf="Password?.hasError('minlength')" class="text-danger h6">
+                        El password debe ser de 8 o más caracteres.
+                      </p> 
+                    </div>
+                    <!-- fin de configurar cotrolador pasword-->
+                    <div class="modal-footer pt-3 d-flex justify-content-center">
+                        <button type="button" class="btn btn-outline-secondary m-1" (click)="limpiar()">Limpiar</button>
+                        <button type="submit" class="btn btn-warning m-1">Ingresar</button>
+                    </div>
+                    
+                </form>
+                <!-- fin del form -->
+    
+            </div>
+            
+          </div>
+    </div>
+    </div>
+</div>
+</body>

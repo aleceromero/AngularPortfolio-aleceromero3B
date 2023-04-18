@@ -33,6 +33,7 @@ import { EditEducacionComponent } from './editar/edit-educacion/edit-educacion.c
 import { EditHabilidadComponent } from './editar/edit-habilidad/edit-habilidad.component';
 import { EditProyectoComponent } from './editar/edit-proyecto/edit-proyecto.component';
 import { EditSobreMiComponent } from './editar/edit-sobre-mi/edit-sobre-mi.component';
+import { FormLoginComponent } from './componentes/form-login/form-login.component';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import { EditSobreMiComponent } from './editar/edit-sobre-mi/edit-sobre-mi.compo
     EditEducacionComponent,
     EditHabilidadComponent,
     EditProyectoComponent,
-    EditSobreMiComponent
+    EditSobreMiComponent,
+    FormLoginComponent
   ],
   imports: [
     BrowserModule,
