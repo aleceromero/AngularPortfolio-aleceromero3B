@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -34,6 +34,8 @@ import { EditHabilidadComponent } from './editar/edit-habilidad/edit-habilidad.c
 import { EditProyectoComponent } from './editar/edit-proyecto/edit-proyecto.component';
 import { EditSobreMiComponent } from './editar/edit-sobre-mi/edit-sobre-mi.component';
 import { FormLoginComponent } from './componentes/form-login/form-login.component';
+import { PersonaService } from './servicios/persona.service';
+import { InterceptorService } from './servicios/interceptor.service';
 
 
 @NgModule({
@@ -76,7 +78,7 @@ import { FormLoginComponent } from './componentes/form-login/form-login.componen
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [PersonaService, { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

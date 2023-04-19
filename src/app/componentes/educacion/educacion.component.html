@@ -6,7 +6,7 @@
                     <h2 class="h2">Educación</h2>
                 </div>
                 <!-- boton de agregar -->
-                <div class="col-2 fondoNaranja" >
+                <div class="col-2 fondoNaranja" *ngIf="modoEdit" >
                     <div id="EducacionEdit" class="d-flex flex-row-reverse mt3">
                         <button type="button" class="btn  px-1 btn-outline-dark  fondoNaranja" data-bs-toggle="modal" data-bs-target="#agregarEdModal"><i class="fa-solid fa-plus" style="width: 30px; color:blanchedalmond"></i>
                         </button>
@@ -16,13 +16,13 @@
                 <app-agregar-ed-modal></app-agregar-ed-modal>
                 <!-- fin modal agregar educacion -->
             </div>
-            <ul class="ps-1 pt-3">
+            <ul class="ps-2 pt-3">
                 <li *ngFor="let educacion of estudios" class="list-unstyled">
                     <div class="row ">
                         <div class="col-10">
                             <h5 class="h5 fw-bold">{{educacion.titulo}}</h5>
                         </div>
-                        <div class="col-2 text-end" >
+                        <div class="col-2 text-end" *ngIf="modoEdit" >
                             <!-- botones de edicion -->
                             <button type="button" class="btn px-1 btn-dark" routerLink="editEducacion/{{educacion.id}}"><i class="fa-solid fa-pen" style="width: 30px; color:blanchedalmond"></i>
                             </button>
@@ -35,7 +35,7 @@
                     </div>
                     <h6 class="text-uppercase">{{educacion.establecimiento}}</h6>
                     <P class="fst-italic">{{educacion.fechaInicio}} / {{educacion.fechaFin}} </P>
-                    {{educacion.descripcion}}
+                    <p id="descrip">{{educacion.descripcion}}</p>
                     <hr size="1px" color="#fdf1c9" />
                 </li>
             </ul>

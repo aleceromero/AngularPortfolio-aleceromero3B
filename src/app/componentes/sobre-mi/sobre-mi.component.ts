@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Persona } from 'src/app/model/persona';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 import { PersonaService } from 'src/app/servicios/persona.service';
 
 
@@ -12,11 +13,21 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 export class SobreMiComponent implements OnInit {
   personas: Persona[]=[]; // llamamos al modelo persona
 
-  constructor(private persoServ:PersonaService) { }
+  modoEdit: any;
+
+  constructor(private persoServ:PersonaService, private autService: AutenticacionService) { }
 
   
   ngOnInit(): void {
     this.cargarPersona();
+
+    if (sessionStorage.getItem('currentUser') == "null"){
+      this.modoEdit = false;
+    }else if (sessionStorage.getItem('currentUser') == null){
+      this.modoEdit = false;
+    }else{
+      this.modoEdit = true;
+    }
   }
 
   cargarPersona(): void {

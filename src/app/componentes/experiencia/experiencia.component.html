@@ -5,7 +5,7 @@
                 <div class="col-10 fondoNaranja">
                     <h2 class="h2">Experiencia</h2>
                 </div>
-                <div class="col-2 fondoNaranja" >
+                <div class="col-2 fondoNaranja" *ngIf="modoEdit">
                 <!-- boton de agregar -->
                     <div id="ExperienciaEdit" class="d-flex flex-row-reverse mt3">
                         <button type="button" class="btn  px-1  btn-outline-dark  fondoNaranja"  data-bs-toggle="modal" data-bs-target="#agregarExpModal"><i class="fa-solid fa-plus" style="width: 30px; color:blanchedalmond"></i>
@@ -16,13 +16,13 @@
                 <!-- modal agregar experiencia --> 
                 </div>
             </div>
-            <ul class="ps-1 me-0 pt-3">
+            <ul class="ps-2 me-0 pt-3">
                 <li *ngFor="let experiencia of experiencias" class="list-unstyled">
                     <div class="row ">
                         <div class="col-10">
                             <h5 class="h5 fw-bold">{{experiencia.puesto}}</h5>
                         </div>
-                        <div class="col-2 text-end" >
+                        <div class="col-2 text-end" *ngIf="modoEdit" >
                         <!-- botones de edicion -->
                         <!--<button type="button" class="btn px-1 btn-dark" data-bs-toggle="modal" data-bs-target="#experienciaModal"><i class="fa-solid fa-pen" style="width: 30px; color:blanchedalmond"></i>
                         </button> -->
@@ -38,7 +38,7 @@
                     </div>
                     <h6 class="text-uppercase">{{experiencia.empresa}}</h6> 
                     <P class="fst-italic">{{experiencia.fechaInicio}} / {{experiencia.fechaFin}} </P>
-                    {{experiencia.descripcion}}
+                    <p id="descrip">{{experiencia.descripcion}}</p>
                     
                     <hr size="1px" color="#fdf1c9" />
                 </li>

@@ -12,11 +12,22 @@ import { ProyectoService } from 'src/app/servicios/proyecto.service';
 export class ProyectosComponent implements OnInit {
   proyectos: Proyecto[]=[]; //se llama al modelo proyecto  
 
+  modoEdit: any;
+
   constructor(private proyectServ:ProyectoService) { }
 
 
   ngOnInit(): void {
     this.cargarProyecto();
+
+    if (sessionStorage.getItem('currentUser') == "null"){
+      this.modoEdit = false;
+    }else if (sessionStorage.getItem('currentUser') == null){
+      this.modoEdit = false;
+    }else{
+      this.modoEdit = true;
+    }
+
   }
 
   cargarProyecto(): void {

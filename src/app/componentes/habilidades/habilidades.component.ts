@@ -11,12 +11,23 @@ import { HabilidadService } from 'src/app/servicios/habilidad.service';
 
 export class HabilidadesComponent implements OnInit {
   habilidades: Habilidad[]=[]; //se llama al modelo habilidad
+
+  modoEdit: any;
   
   constructor(private habServ:HabilidadService) { }
 
 
   ngOnInit(): void {
    this.cargarHabilidad();
+  
+   if (sessionStorage.getItem('currentUser') == "null"){
+    this.modoEdit = false;
+  }else if (sessionStorage.getItem('currentUser') == null){
+    this.modoEdit = false;
+  }else{
+    this.modoEdit = true;
+  }
+
   }
 
   cargarHabilidad(): void {

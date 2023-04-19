@@ -6,7 +6,7 @@
                     <h2 class="h2">Proyectos</h2>
                 </div>
               
-                <div class="col-2" >
+                <div class="col-2" *ngIf="modoEdit" >
                     <!-- boton de agregar -->
                     <div id="ProyectosEdit" class="d-flex flex-row-reverse">
                         <button type="button" class="btn  px-1 btn-dark" data-bs-toggle="modal" data-bs-target="#agregarProyModal"><i class="fa-solid fa-plus" style="width: 30px; color:blanchedalmond"></i>
@@ -26,7 +26,7 @@
                     <div class="card-body"><h5 class="h5">{{proyecto.proyecto}}</h5>
                         <p class="card-text">{{proyecto.descripcion}}</p>
                         <!-- botones de edicion -->
-                        <div style="text-align:right">
+                        <div style="text-align:right" *ngIf="modoEdit">
                             <button type="button" class="btn px-1  btn-dark" routerLink="editProyecto/{{proyecto.id}}"><i class="fa-solid fa-pen" style="width: 30px; color:blanchedalmond"></i>
                             </button>
                             <button type="button" class="btn ms-1 btn-dark" (click)="delete(proyecto.id)"><i class="fa-solid fa-xmark" style="width: 15px; color:blanchedalmond"></i>

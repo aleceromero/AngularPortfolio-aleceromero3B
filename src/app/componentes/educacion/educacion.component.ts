@@ -12,11 +12,22 @@ import { EducacionService } from 'src/app/servicios/educacion.service';
 export class EducacionComponent implements OnInit {
   estudios: Educacion[]=[];  //se llama al modelo educacion
 
+  modoEdit: any;
+
   constructor(private eduServ:EducacionService) { }
 
 
   ngOnInit(): void {
     this.cargarEducacion();
+
+    if (sessionStorage.getItem('currentUser') == "null"){
+      this.modoEdit = false;
+    }else if (sessionStorage.getItem('currentUser') == null){
+      this.modoEdit = false;
+    }else{
+      this.modoEdit = true;
+    }
+        
   }
 
   cargarEducacion(): void {

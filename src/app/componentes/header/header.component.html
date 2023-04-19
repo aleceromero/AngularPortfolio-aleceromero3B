@@ -34,12 +34,13 @@
                         </li>
                         <li>
                           <!-- boton login -->
-                          <app-login></app-login>
+                          <app-login *ngIf="!modoEdit"></app-login>
                           <!-- fin boton login -->
                           </li>
                         <li>
                           <!-- boton logout -->
-                          <app-logout></app-logout>
+                          <button class="btn btn-outline-light" type="submit" style="margin-left:15px;" (click)="cerrarSesion()" *ngIf="modoEdit">Cerrar sesión</button>
+                          <!--<app-logout></app-logout>-->
                           <!-- fin de boton logout -->
                         </li>
                      </ul>

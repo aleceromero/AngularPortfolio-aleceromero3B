@@ -103,6 +103,36 @@
                       <label for="InputSobreMi" class="form-label text-dark">Sobre Mí</label>
                       <textarea class="form-control" formControlName="sobreMi" [ngModel]="persona.sobreMi" id="InputSobreMi"></textarea>
                     </div>
+                    <div class="mb-3">
+                      
+                      <input type="hidden" class="form-control" formControlName="emailLogin" [ngModel]="persona.emailLogin" id="InputEmailLogin" aria-describedby="emailHelp" required
+                      [ngClass]="{'is-invalid': EmailLogin?.errors && EmailLogin?.touched, 'is-valid': !EmailLogin?.errors && EmailLogin?.touched}">
+                    </div>
+                    <!-- configurar cotrolador email Login -->
+                    <div *ngIf="EmailLogin?.touched && EmailLogin?.errors" >
+                      <p *ngIf="EmailLogin?.hasError('required')" class="text-danger">
+                        El email es requerido
+                      </p>
+                      <p *ngIf="EmailLogin?.hasError('email')" class="text-danger">
+                        El formato del email debe ser válido.
+                      </p>
+                    </div>
+                    <!-- fin de configurar cotrolador email login-->
+                    <div class="mb-3">
+                      
+                      <input type="hidden" class="form-control" formControlName="password" [ngModel]="persona.password" id="InputPassword"
+                      [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}">
+                    </div>
+                    <!-- configurar cotrolador pasword -->
+                    <div *ngIf="Password?.errors && Password?.touched" >
+                      <p *ngIf="Password?.hasError('required')" class="text-danger h6" >
+                        La contraseña es requerida
+                      </p>
+                      <p *ngIf="Password?.hasError('minlength')" class="text-danger h6">
+                        El password debe ser de 8 o más caracteres.
+                      </p> 
+                    </div>
+                    <!-- fin de configurar cotrolador pasword-->
     
                     <div class="modal-footer pt-3 d-flex justify-content-center">
                       <button type="submit" class="btn btn-warning">Enviar</button>

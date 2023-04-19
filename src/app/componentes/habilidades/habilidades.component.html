@@ -5,7 +5,7 @@
                 <div class="col-10">
                     <h2 class="h2">Habilidades</h2>
                 </div>
-                <div class="col-2" >
+                <div class="col-2" *ngIf="modoEdit" >
                     <!-- boton de agregar -->
                     <div id="HabilidadesEdit" class="d-flex flex-row-reverse">
                         <button type="button" class="btn  px-1  btn-outline-dark" data-bs-toggle="modal" data-bs-target="#agregarHabModal"><i class="fa-solid fa-plus" style="width: 30px"></i>
@@ -17,14 +17,14 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid px-3">
             <ul class="px-1 ">
                 <li *ngFor="let habilidad of habilidades" class="list-unstyled pt-3">
                     <div class="row ">
                         <div class="col-10">
                             <h6 class="h6">{{habilidad.habilidad}}</h6>
                         </div>
-                        <div class="col-2 text-end">
+                        <div class="col-2 text-end" *ngIf="modoEdit">
                             <!-- botones de edicion -->
                             <!--<button type="button" class="btn px-1" data-bs-toggle="modal" data-bs-target="#habilidadesModal"><i class="fa-solid fa-pen" style="width: 30px"></i>
                             </button> -->

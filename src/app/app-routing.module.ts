@@ -8,9 +8,10 @@ import { EditHabilidadComponent } from './editar/edit-habilidad/edit-habilidad.c
 import { EditProyectoComponent } from './editar/edit-proyecto/edit-proyecto.component';
 import { EditSobreMiComponent } from './editar/edit-sobre-mi/edit-sobre-mi.component';
 import { FormLoginComponent } from './componentes/form-login/form-login.component';
+import { GuardGuard } from './servicios/guard.guard';
 
 const routes: Routes = [
-  {path: '', component: IndexComponent},
+  {path: '', component: IndexComponent, canActivate: [GuardGuard]},
   {path: 'login', component: FormLoginComponent},
   {path: 'editExperiencia/:id', component: EditExperienciaComponent},
   {path: 'editEducacion/:id', component: EditEducacionComponent},
