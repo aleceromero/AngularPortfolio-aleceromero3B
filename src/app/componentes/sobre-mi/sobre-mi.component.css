@@ -2,3 +2,10 @@
     background-color:#fdf1c9; 
     padding-top: 12px;
 }
+
+#descripcion {
+    white-space: pre-line;
+    font-style: italic;
+    text-align: justify;
+    width: 95%;
+}
