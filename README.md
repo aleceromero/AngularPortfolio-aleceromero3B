@@ -10,9 +10,20 @@ El portfolio consiste en una página que muestra datos personales, experiencias 
 En este código se encuentra la interfaz gráfica la cual será desplegada en Firebase.
 
 ## Portfolio
-Para ver su despliegue online ingresar aquí:
+Para ver su despliegue online ingresar [aquí](https://alejandra-romero-portfolio.web.app) 
+(recordar que el primer ingreso puede demorar de uno a dos minutos en cargar debido a que la cuenta gratuita de render desactiva el servicio automáticamente después de quince minutos sin uso)
 
-Para ver el funcionamiento en su etapa de modo local (localhost:4200) ver el siguiente [video](https://drive.google.com/file/d/1s99YAPshf8yvAEDeWiEaCGQN6TLA4ipO)
+Para ver el video de su funcionamiento en despliegue online haga [click aquí](https://mega.nz/file/4FYVgLxZ#lWHOJWNxHd_QRshzehvGncW28ALZHsiQMOWxOcXDTOg)
+
+Para ver el video de su funcionamiento desde un celular haga [click aquí](https://mega.nz/file/9ZxSjIpa#R8OoTph2ASoesCjIBJCruyV53BPpAGnSbuAW236sNjs)
+
+Para ver el funcionamiento en su etapa de modo local (localhost:4200) ver el siguiente [video](https://drive.google.com/file/d/1s99YAPshf8yvAEDeWiEaCGQN6TLA4ipO/view?usp=share_link)
+
+## Base de Datos
+DER
+![diagrama der de la base de datos](https://drive.google.com/file/d/17dbBFDYUphWGDhz8g2kVKlAh0ufnt0km/view?usp=share_link)
+
+Para visualizar el script de la base de datos hacer [click aquí](https://mega.nz/file/tMhCDBxS#Sw1GiW-2Owqmbcsbdr91RuiJXTTtEVwncY_h9J1h2eo)
 
 ## Development server
 
