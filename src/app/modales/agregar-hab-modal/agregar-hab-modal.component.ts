@@ -19,9 +19,9 @@ export class AgregarHabModalComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private habServ:HabilidadService) {
     // grupo de controles formulario
     this.form = this.formBuilder.group({
-    addHabilidad:['',[Validators.required]],
-    addNivel:['',[Validators.required, Validators.maxLength(3)]],
-    addDescripcionHab:[''],
+    habilidad:['',[Validators.required]],
+    nivel:['',[Validators.required, Validators.maxLength(3)]],
+    descripcion:[''],
     })
    }
 
@@ -30,15 +30,15 @@ export class AgregarHabModalComponent implements OnInit {
 
   // metodos para el formulario
   get Habilidad(){
-    return this.form.get("addHabilidad");
+    return this.form.get("habilidad");
   }
 
   get Nivel(){
-    return this.form.get("addNivel");
+    return this.form.get("nivel");
   }
 
-  get DescripcionEd(){
-    return this.form.get("addDescripcionHab");
+  get Descripcion(){
+    return this.form.get("descripcion");
   }
 
   limpiar(): void{

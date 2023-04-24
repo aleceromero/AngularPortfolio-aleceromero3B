@@ -38,6 +38,7 @@ export class HabilidadesComponent implements OnInit {
     if(confirm("Querés eliminar esta habilidad?")){
       this.habServ.deleteHabilidad(id).subscribe(data => {this.cargarHabilidad();});
       window.location.reload();
+      alert("la habilidad se elimino correctamente");
     }
   }
 

@@ -38,6 +38,7 @@ export class EducacionComponent implements OnInit {
     if(confirm("Querés eliminar esta educación?")){
       this.eduServ.deleteEducacion(id).subscribe(data => {this.cargarEducacion();});
       window.location.reload();
+      alert("la educacion se elimino correctamente");
     }
   }
 

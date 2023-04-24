@@ -37,10 +37,11 @@ export class ExperienciaComponent implements OnInit {
     this.expeServ.getExperiencias().subscribe(data => {this.experiencias = data});
   }
 
-  delete(id:number) {
+  delete(id:number){
     if(confirm("Querés eliminar esta experiencia?")){
-      this.expeServ.deleteExperiencia(id).subscribe(data => {this.cargarExperiencia();});
-      window.location.reload();
+    this.expeServ.deleteExperiencia(id).subscribe(data => {this.cargarExperiencia();});
+    window.location.reload();
+    alert("la experiencia se elimino correctamente");
     }
   }
   

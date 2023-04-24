@@ -8,10 +8,10 @@
         </div>
         <div class="modal-body">
             <!-- inicio form -->
-            <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+            <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="experienciaForm">
                 <div class="mb-3">
-                  <label for="InputAddPuesto" class="form-label text-dark" >Puesto</label>
-                  <input type="text" class="form-control" formControlName="addPuesto" [(ngModel)]="puesto" id="InputAddPuesto" required
+                  <label for="InputPuesto" class="form-label text-dark" >Puesto</label>
+                  <input type="text" class="form-control" formControlName="puesto" [(ngModel)]="puesto" id="InputPuesto" required
                   [ngClass]="{'is-invalid': Puesto?.errors && Puesto?.touched, 'is-valid': !Puesto?.errors && Puesto?.touched}">
                 </div>
                 <!-- configurar cotrolador puesto -->
@@ -22,8 +22,8 @@
                 </div>
                 <!-- fin de configurar cotrolador puesto-->
                 <div class="mb-3">
-                  <label for="InputAddFechaInicio" class="form-label text-dark">Fecha inicio</label>
-                  <input type="date" class="form-control" formControlName="addFechaInicio" [(ngModel)]="fechaInicio" id="InputAddFechaInicio" required
+                  <label for="InputFechaInicio" class="form-label text-dark">Fecha inicio</label>
+                  <input type="date" class="form-control" formControlName="fechaInicio" [(ngModel)]="fechaInicio" id="InputFechaInicio" required
                   [ngClass]="{'is-invalid': FechaInicio?.errors && FechaInicio?.touched, 'is-valid': !FechaInicio?.errors && FechaInicio?.touched}">
                 </div>
                 <!-- configurar cotrolador FechaInicio -->
@@ -34,12 +34,20 @@
                 </div>
                 <!-- fin de configurar cotrolador FechaInicio-->
                 <div class="mb-3">
-                  <label for="InputAddFechaFin" class="form-label text-dark">Fecha fin</label>
-                  <input type="date" class="form-control" formControlName="addFechaFin" [(ngModel)]="fechaFin" id="InputAddFechaFin">
+                  <label for="InputFechaFin" class="form-label text-dark">Fecha fin</label>
+                  <input type="date" class="form-control" formControlName="fechaFin" [(ngModel)]="fechaFin" id="InputFechaFin"
+                  [ngClass]="{'is-invalid': FechaFin?.errors && FechaFin?.touched, 'is-valid': !FechaFin?.errors && FechaFin?.touched}">
                 </div>
+                <!-- configurar cotrolador FechaFin -->
+                <div *ngIf="FechaFin?.touched">
+                  <p *ngIf="FechaFin?.hasError('required')" class="text-danger">
+                    La fecha de fin es requerida
+                  </p>
+                </div>
+                <!-- fin de configurar cotrolador FechaInicio-->
                 <div class="mb-3">
-                  <label for="InputAddEmpresa" class="form-label text-dark">Empresa</label>
-                  <input type="text" class="form-control" formControlName="addEmpresa" [(ngModel)]="empresa" id="InputAddEmpresa" required
+                  <label for="InputEmpresa" class="form-label text-dark">Empresa</label>
+                  <input type="text" class="form-control" formControlName="empresa" [(ngModel)]="empresa" id="InputEmpresa" required
                   [ngClass]="{'is-invalid': Empresa?.errors && Empresa?.touched, 'is-valid': !Empresa?.errors && Empresa?.touched}">
                 </div>
                 <!-- configurar cotrolador Empresa -->
@@ -50,8 +58,8 @@
                 </div>
                 <!-- fin de configurar cotrolador Empresa-->
                 <div class="mb-3">
-                  <label for="InputAddDescripcionExp" class="form-label text-dark">Descripción</label>
-                  <textarea class="form-control" id="InputAddDescripcionExp" formControlName="addDescripcion" [(ngModel)]="descripcion"></textarea>
+                  <label for="InputDescripcionExp" class="form-label text-dark">Descripción</label>
+                  <textarea class="form-control" id="InputDescripcionExp" formControlName="descripcion" [(ngModel)]="descripcion"></textarea>
                 </div>
 
                 <div class="modal-footer">

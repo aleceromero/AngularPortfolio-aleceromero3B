@@ -21,11 +21,11 @@ export class AgregarExpModalComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private expeServ: ExperienciaService) { 
     // grupo de controles formulario
     this.form = this.formBuilder.group({
-      addPuesto:['', [Validators.required]],
-      addFechaInicio:['', [Validators.required]],
-      addFechaFin:[''],
-      addEmpresa:['', [Validators.required]],
-      addDescripcion:[''],
+      puesto:['', [Validators.required]],
+      fechaInicio:['', [Validators.required]],
+      fechaFin:['', [Validators.required]],
+      empresa:['', [Validators.required]],
+      descripcion:[''],
     })
   }
 
@@ -34,23 +34,23 @@ export class AgregarExpModalComponent implements OnInit {
 
   // metodos para el formulario
   get Puesto(){
-    return this.form.get("addPuesto");
+    return this.form.get("puesto");
   }
 
   get FechaInicio(){
-    return this.form.get("addFechaInicio");
+    return this.form.get("fechaInicio");
   }
 
   get FechaFin(){
-    return this.form.get("addFechaFin");
+    return this.form.get("fechaFin");
   }
 
   get Empresa(){
-    return this.form.get("addEmpresa");
+    return this.form.get("empresa");
   }
 
   get Descripcion(){
-    return this.form.get("addDescripcion");
+    return this.form.get("descripcion");
   }
 
   limpiar(): void{
@@ -73,8 +73,9 @@ export class AgregarExpModalComponent implements OnInit {
 
   onCreate(): void {
     const expe = new Experiencia(this.puesto, this.fechaInicio, this.fechaFin, this.empresa, this.descripcion);
-      this.expeServ.saveExperiencia(expe).subscribe(data => {alert("Experiencia añadida")});
+      this.expeServ.saveExperiencia(expe).subscribe(data => {});
       window.location.reload();
+      alert("experiencia añadida");
   }
 
 }

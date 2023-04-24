@@ -20,10 +20,10 @@ export class AgregarProyModalComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private proyectServ:ProyectoService) { 
     // grupo de controles formulario
     this.form = this.formBuilder.group({
-      addProyecto:['', [Validators.required]],
-      addImgProyecto:['', [Validators.required]],
-      addUrlProyecto:['', [Validators.required]],
-      addDescripcionPr:[''],
+      proyecto:['', [Validators.required]],
+      imgProyecto:['', [Validators.required]],
+      urlProyecto:['', [Validators.required]],
+      descripcion:[''],
     })
   }
 
@@ -33,19 +33,19 @@ export class AgregarProyModalComponent implements OnInit {
 
   // metodos para el formulario
   get Proyecto(){
-    return this.form.get("addProyecto");
+    return this.form.get("proyecto");
   }
 
   get ImgProyecto(){
-    return this.form.get("addImgProyecto");
+    return this.form.get("imgProyecto");
   }
 
   get UrlProyecto(){
-    return this.form.get("addUrlProyecto");
+    return this.form.get("urlProyecto");
   }
 
   get DescripcionPr(){
-    return this.form.get("addDescripcionPr");
+    return this.form.get("descripcion");
   }
 
   limpiar(): void{

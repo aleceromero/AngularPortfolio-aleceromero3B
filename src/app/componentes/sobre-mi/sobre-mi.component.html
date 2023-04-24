@@ -1,14 +1,9 @@
 <div class="container-fluid" style="margin-bottom:1px; margin-top:0">
-    <div id="sobreMi" class="row rounded" *ngFor="let persona of personas">
+    <div id="sobreMi" class="row rounded pb-3" *ngFor="let persona of personas">
         <div class="col-8 col-sm-3 col-md-2 offset-2 offset-sm-0 offset-md-0">
             <img [src]="persona.imgPerfil" alt="Mi foto" width="100%" class="rounded-circle" style="margin-top:-50%">
             <div style="text-align:right">
-                <!-- boton de editar foto perfil -->
-                <!-- <button type="button" class="btn btn-outline-dark" style="margin-top:-13%" data-bs-toggle="modal" data-bs-target="#imgPerfilModal"><i class="fa-solid fa-pen"></i>
-                </button> -->
-                <!-- modal edicion img Perfil-->
-                <!-- <app-img-perfil-modal></app-img-perfil-modal> -->
-                <!-- Fin de modal edicion img Perfil-->
+                
                 
             </div>
         </div>
@@ -34,7 +29,7 @@
                 <app-sobre-mi-modal></app-sobre-mi-modal> 
                  
             </div>
-            <p class="font-italic p-1 pl-2" id="descripcion">{{persona.sobreMi}}</p>
+            <p class="font-italic h6 p-1 pl-2" id="descripcion">{{persona.sobreMi}}</p>
         </div>
         
     </div>

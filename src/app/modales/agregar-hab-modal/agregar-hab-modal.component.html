@@ -10,8 +10,8 @@
             <!-- inicio form -->
             <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                 <div class="mb-3">
-                <label for="InputAddHabilidad" class="form-label text-dark">Habilidad</label>
-                <input type="text" class="form-control" formControlName="addHabilidad" [(ngModel)]="habilidad" id="InputAddHabilidad" required
+                <label for="InputHabilidad" class="form-label text-dark">Habilidad</label>
+                <input type="text" class="form-control" formControlName="habilidad" [(ngModel)]="habilidad" id="InputHabilidad" required
                 [ngClass]="{'is-invalid': Habilidad?.errors && Habilidad?.touched, 'is-valid': !Habilidad?.errors && Habilidad?.touched}">
                 </div>
                 <!-- configurar cotrolador habilidad -->
@@ -22,8 +22,8 @@
                 </div>
                 <!-- fin de configurar cotrolador habilidad-->
                 <div class="mb-3">
-                  <label for="InputAddNivel" class="form-label text-dark">Nivel en %</label>
-                  <input type="number" min="1" max="100" class="form-control" formControlName="addNivel" [(ngModel)]="nivel" id="InputAddNivel" required
+                  <label for="InputNivel" class="form-label text-dark">Nivel en %</label>
+                  <input type="number" min="1" max="100" class="form-control" formControlName="nivel" [(ngModel)]="nivel" id="InputNivel" required
                   [ngClass]="{'is-invalid': Nivel?.errors && Nivel?.touched, 'is-valid': !Nivel?.errors && Nivel?.touched}">
                 </div>
                 <!-- configurar cotrolador nivel -->

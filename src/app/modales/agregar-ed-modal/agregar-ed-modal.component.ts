@@ -21,11 +21,11 @@ export class AgregarEdModalComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private eduServ: EducacionService) { 
     // grupo de controles formulario
     this.form = this.formBuilder.group({
-      addTitulo: ['',[Validators.required]],
-      addFechaInicioEd:['', [Validators.required]],
-      addFechaFinEd:[''],
-      addEstablecimiento:['', [Validators.required]],
-      addDescripcionEd:[''],
+      titulo: ['',[Validators.required]],
+      fechaInicio:['', [Validators.required]],
+      fechaFin:['', [Validators.required]],
+      establecimiento:['', [Validators.required]],
+      descripcion:[''],
     })
   }
 
@@ -33,23 +33,23 @@ export class AgregarEdModalComponent implements OnInit {
   }
 
   get Titulo(){
-    return this.form.get("addTitulo");
+    return this.form.get("titulo");
   }
 
-  get FechaInicioEd(){
-    return this.form.get("addFechaInicioEd");
+  get FechaInicio(){
+    return this.form.get("fechaInicio");
   }
 
-  get FechaFinEd(){
-    return this.form.get("addFechaFinEd");
+  get FechaFin(){
+    return this.form.get("fechaFin");
   }
 
   get Establecimiento(){
-    return this.form.get("addEstablecimiento");
+    return this.form.get("establecimiento");
   }
 
   get DescripcionEd(){
-    return this.form.get("addDescripcionEd")
+    return this.form.get("descripcion")
   }
   
   limpiar(): void{

@@ -38,6 +38,7 @@ export class ProyectosComponent implements OnInit {
     if(confirm("Querés eliminar este proyecto?")){
       this.proyectServ.deleteProyecto(id).subscribe(data => {this.cargarProyecto();});
       window.location.reload();
+      alert("el proyecto se elimino correctamente");
     }
   }
 
