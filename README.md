@@ -11,7 +11,7 @@ En este código se encuentra la interfaz gráfica la cual será desplegada en Fi
 
 ## Portfolio
 Para ver su despliegue online ingresar [aquí](https://alejandra-romero-portfolio.web.app) 
-(recordar que el primer ingreso puede demorar de uno a dos minutos en cargar debido a que la cuenta gratuita de render desactiva el servicio automáticamente después de quince minutos sin uso)
+(recordar que el primer ingreso puede demorar de uno a dos minutos en cargar debido a que la cuenta gratuita de render desactiva el servicio automáticamente después de quince minutos sin uso, también puede ser necesario borrar la cache del historial de navegacion si el portfolio fue abierto previamente)
 
 Para ver el video de su funcionamiento en despliegue online haga [click aquí](https://mega.nz/file/4FYVgLxZ#lWHOJWNxHd_QRshzehvGncW28ALZHsiQMOWxOcXDTOg)
 
