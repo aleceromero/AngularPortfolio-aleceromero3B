@@ -21,7 +21,7 @@ Para ver el funcionamiento en su etapa de modo local (localhost:4200) ver el sig
 
 ## Base de Datos
 DER
-![diagrama der de la base de datos](https://drive.google.com/file/d/17dbBFDYUphWGDhz8g2kVKlAh0ufnt0km/view?usp=share_link)
+![diagrama der de la base de datos](https://mega.nz/file/MJ4TBZAK#eDczIrz3MXHlr7UJGrqzJ37iJ8nXc-0cdZQtYUrYBUw)
 
 Para visualizar el script de la base de datos hacer [click aquí](https://mega.nz/file/tMhCDBxS#Sw1GiW-2Owqmbcsbdr91RuiJXTTtEVwncY_h9J1h2eo)
 
